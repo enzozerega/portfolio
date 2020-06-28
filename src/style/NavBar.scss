@@ -1,0 +1,14 @@
+nav {
+  .active {
+    background-color: fuchsia;
+  }
+  .navbar-item:hover {
+    background-color: pink;
+  }
+}
+
+nav {
+  h1 {
+    font-size: 2em;
+  }
+}
