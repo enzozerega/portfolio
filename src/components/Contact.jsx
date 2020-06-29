@@ -1,24 +1,42 @@
 import React, { Fragment } from "react";
-import Form from "./Form";
+import Form from "./common/Form";
 import "../style/Contact.scss";
+import Input from "./common/Input";
 
 class Contact extends Form {
-  state = {};
+  state = {
+    form: { name: "", email: "", message: "" },
+  };
+
   doSubmit = () => {
     console.log("Submitted");
   };
 
   render() {
+    const { form } = this.state;
     return (
       <Fragment>
         <h1>Contact</h1>
-        <form>
-          <label for="name">Name</label>
-          <input type="text" name="name" />
-          <label for="email">Email</label>
-          <input type="text" name="email" />
-          <label for="message">Message</label>
-          <input type="text" name="message" />
+        <form onSubmit={this.handleSubmit}>
+          <Input
+            name="name"
+            label="Name"
+            onChange={this.handleChange}
+            value={form.name}
+          />
+          <Input
+            name="email"
+            label="Email"
+            onChange={this.handleChange}
+            value={form.email}
+          />
+          <Input
+            name="message"
+            label="Message"
+            onChange={this.handleChange}
+            value={form.message}
+          />
+          <button>Send Message</button>
         </form>
       </Fragment>
     );

@@ -27,23 +27,24 @@ class Form extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    const errors = this.validate();
-    this.setState({ errors: errors || {} });
-    if (errors) return;
+    // const errors = this.validate();
+    // this.setState({ errors: errors || {} });
+    // if (errors) return;
 
     this.doSubmit();
   };
 
   handleChange = ({ currentTarget: input }) => {
-    const errors = { ...this.state.errors };
-    const errorMessage = this.validateProperty(input);
-    if (errorMessage) errors[input.name] = errorMessage;
-    else delete errors[input.name];
+    // const errors = { ...this.state.errors };
+    // const errorMessage = this.validateProperty(input);
+    // if (errorMessage) errors[input.name] = errorMessage;
+    // else delete errors[input.name];
 
-    const data = { ...this.state.data };
-    data[input.name] = input.value;
+    const form = { ...this.state.form };
+    form[input.id] = input.value;
+    this.setState({ form });
 
-    this.setState({ data, errors });
+    // this.setState({ data, errors });
   };
 }
 
