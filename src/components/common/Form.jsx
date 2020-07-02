@@ -1,50 +1,54 @@
 import { Component } from "react";
-import Joi from "joi-browser";
 
 class Form extends Component {
   state = {
-    data: {},
+    form: { name: "", email: "", message: "" },
     errors: {},
   };
 
+  allLetters = (input) => {
+    const allowedLetters = /^[A-Za-z]+$/;
+    if (input.value.match(allowedLetters)) return true;
+    else return false;
+  };
   validate = () => {
-    const options = { abortEarly: false };
-    const { error } = Joi.validate(this.state.data, this.schema, options);
-    if (!error) return null;
-
+    const { form } = this.state;
     const errors = {};
-    for (let item of error.details) errors[item.path[0]] = item.message;
+    for (const field in form) {
+      const error = this.validateProperty({ id: field, value: form[field] });
+      errors[field] = error;
+    }
+
     return errors;
   };
 
-  validateProperty = ({ name, value }) => {
-    const obj = { [name]: value };
-    const schema = { [name]: this.schema[name] };
-    const { error } = Joi.validate(obj, schema);
-    return error ? error.details[0].message : null;
+  validateProperty = ({ id, value }) => {
+    const errors = {};
+    const obj = { [id]: value };
+    if (obj[id].trim() === "")
+      errors[id] = `The ${id[0].toUpperCase() + id.slice(1)} field is required`;
+    return errors ? errors[id] : null;
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
 
-    // const errors = this.validate();
-    // this.setState({ errors: errors || {} });
-    // if (errors) return;
+    const errors = this.validate();
+    this.setState({ errors: errors || {} });
+    if (errors) return;
 
     this.doSubmit();
   };
 
   handleChange = ({ currentTarget: input }) => {
-    // const errors = { ...this.state.errors };
-    // const errorMessage = this.validateProperty(input);
-    // if (errorMessage) errors[input.name] = errorMessage;
-    // else delete errors[input.name];
+    const errors = { ...this.state.errors };
+    const errorMessage = this.validateProperty(input);
+    if (errorMessage) errors[input.id] = errorMessage;
+    else delete errors[input.id];
 
     const form = { ...this.state.form };
     form[input.id] = input.value;
-    this.setState({ form });
-
-    // this.setState({ data, errors });
+    this.setState({ form, errors });
   };
 }
 
