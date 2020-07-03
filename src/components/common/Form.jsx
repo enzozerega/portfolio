@@ -27,8 +27,7 @@ class Form extends Component {
       const error = this.validateProperty({ id: field, value: form[field] });
       if (error) errors[field] = error;
     }
-
-    return errors;
+    return errors ? Object.keys(errors).length > 0 : null;
   };
 
   validateProperty = ({ id, value }) => {
@@ -71,8 +70,7 @@ class Form extends Component {
 
     const errors = this.validate();
     this.setState({ errors: errors || {} });
-    console.log(Object.keys(errors).length);
-    if (Object.keys(errors).length > 0) return;
+    if (errors) return;
     this.doSubmit();
   };
 

@@ -49,7 +49,7 @@ class Contact extends Form {
             value={form.message}
             error={errors.message}
           />
-          <button>Send Message</button>
+          <button disabled={this.validate()}>Send Message</button>
         </form>
       </Fragment>
     );
