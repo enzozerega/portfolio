@@ -1,4 +1,5 @@
-import { Component } from "react";
+import React, { Component } from "react";
+import Input from "./Input";
 
 class Form extends Component {
   state = {
@@ -83,6 +84,23 @@ class Form extends Component {
     const form = { ...this.state.form };
     form[input.id] = input.value;
     this.setState({ form, errors });
+  };
+
+  renderButton = (label) => {
+    return <button disabled={this.validate()}>{label}</button>;
+  };
+
+  renderInput = (key) => {
+    const { form, errors } = this.state;
+    return (
+      <Input
+        name={key}
+        label={key[0].toUpperCase() + key.slice(1)}
+        onChange={this.handleChange}
+        value={form[key]}
+        error={errors[key]}
+      />
+    );
   };
 }
 
