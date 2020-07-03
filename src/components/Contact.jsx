@@ -1,6 +1,14 @@
 import React, { Fragment } from "react";
 import Form from "./common/Form";
 import "../style/Contact.scss";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+} from "react-icons/fa";
+import { MdMail } from "react-icons/md";
 
 class Contact extends Form {
   state = {
@@ -27,6 +35,12 @@ class Contact extends Form {
         </section>
         <section>
           <h2>Other contact options</h2>
+          <FaGithub />
+          <MdMail />
+          <FaLinkedin />
+          <FaFacebook />
+          <FaTwitter />
+          <FaInstagram />
         </section>
       </Fragment>
     );
