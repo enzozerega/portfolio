@@ -16,12 +16,18 @@ class Contact extends Form {
     return (
       <Fragment>
         <h1>Contact</h1>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderInput("name")}
-          {this.renderInput("email")}
-          {this.renderInput("message")}
-          {this.renderButton("Send Message")}
-        </form>
+        <section>
+          <h2>Send me a message</h2>
+          <form onSubmit={this.handleSubmit}>
+            {this.renderInput("name")}
+            {this.renderInput("email")}
+            {this.renderInput("message")}
+            {this.renderButton("Send Message")}
+          </form>
+        </section>
+        <section>
+          <h2>Other contact options</h2>
+        </section>
       </Fragment>
     );
   }
