@@ -7,8 +7,9 @@ class Form extends Component {
   };
 
   allLetters = (input) => {
-    const allowedLetters = /^[A-Za-z]+$/;
-    if (input.value.match(allowedLetters)) return true;
+    const allowedLetters = /^[a-zA-Z\u00C0-\u00ff\-,'´ ]+$/;
+    console.log(input.match(allowedLetters));
+    if (input.match(allowedLetters)) return true;
     else return false;
   };
   validate = () => {
@@ -27,6 +28,20 @@ class Form extends Component {
     const obj = { [id]: value };
     if (obj[id].trim() === "")
       errors[id] = `The ${id[0].toUpperCase() + id.slice(1)} field is required`;
+    else
+      switch (id) {
+        case "name":
+          if (!this.allLetters(obj[id]))
+            errors[id] = `The ${
+              id[0].toUpperCase() + id.slice(1)
+            } field contains invalid characters`;
+          else if (obj[id].length >= 50)
+            errors[id] = `The ${
+              id[0].toUpperCase() + id.slice(1)
+            } field cannot be larger than 50 characters`;
+          break;
+        default:
+      }
     return errors ? errors[id] : null;
   };
 
