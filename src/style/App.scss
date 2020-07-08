@@ -1,9 +1,21 @@
+@font-face {
+  src: url("./fonts/noto-serif-v8-latin-regular.woff2");
+  font-family: noto;
+}
+
+@font-face {
+  src: url("./fonts/fira-code-v9-latin-regular.woff2");
+  font-family: firacode;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #2e00ac;
   color: white;
+  font-family: noto, serif;
+  // font-family: "Playfair Display", Arial;
 }
 
 nav,
