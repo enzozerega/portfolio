@@ -1,12 +1,19 @@
 import React, { Component, Fragment } from "react";
+import { motion } from "framer-motion";
+import "../style/About.scss";
 
 class About extends Component {
   state = {};
+  transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] };
   render() {
     return (
       <Fragment>
-        <h1>About</h1>
-        <section>
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, translateY: -50 }}
+          transition={this.transition}
+          exit="exit"
+        >
           <h2>Who I am</h2>
           <p>
             Hi. Thanks for wanting to know more about me. Here I describe some
@@ -137,7 +144,7 @@ class About extends Component {
             – and talk about how we could save the world? Don't doubt on
             reaching me out if you think we should.
           </p>
-        </section>
+        </motion.section>
       </Fragment>
     );
   }

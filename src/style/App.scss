@@ -8,19 +8,48 @@
   font-family: firacode;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #2e00ac;
-  color: white;
-  font-family: noto, serif;
-  // font-family: "Playfair Display", Arial;
+  box-sizing: inherit;
 }
 
-nav,
-main,
-footer {
-  border: 1px solid papayawhip;
-  margin: 1rem;
+html {
+  font-family: noto, serif;
+  font-size: 26px;
+  background-color: #fdfbfc;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  flex-grow: 1;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 20px;
+  }
 }
