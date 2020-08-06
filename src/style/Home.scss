@@ -19,19 +19,6 @@
         font-size: 1.5rem;
       }
     }
-    .cta {
-      padding: 1rem 0;
-      a {
-        border-radius: 4px;
-        background-color: #dc143c;
-        padding: 0.5rem;
-        transition: 0.3s;
-        color: #fdfbfc;
-        &:hover {
-          box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
-        }
-      }
-    }
   }
 
   .hero-image {
@@ -43,10 +30,10 @@
     max-width: 100vh;
     width: 50vw;
     min-width: 50vw;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 
     img {
       width: 100%;

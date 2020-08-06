@@ -1,12 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-const Input = ({ name, label, value, error, onChange }) => {
+const Input = ({ name, label, value, error, onChange, placeholder }) => {
   return (
-    <Fragment>
-      <label htmlFor={name}>{label}</label>
-      <input value={value} onChange={onChange} type="text" id={name} />
+    <div className="form-group">
+      <span>{label}</span>
+      <input
+        class="form-field"
+        value={value}
+        onChange={onChange}
+        type="text"
+        id={name}
+        placeholder={placeholder}
+      />
       {error && <span>{error}</span>}
-    </Fragment>
+    </div>
   );
 };
 

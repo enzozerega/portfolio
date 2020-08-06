@@ -1,3 +1,38 @@
-p {
-  overflow-y: overlay;
+@import "./Variables.scss";
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: max-content;
+  margin: 0 10vw;
+  margin-top: 50px;
+
+  article {
+    background-color: $secondaryColor;
+    width: 36vw;
+    min-width: 36vw;
+    margin: 2rem 2vw;
+    border-radius: 4px;
+    h1 {
+      transform: translateY(-60px);
+      font-size: 3rem;
+    }
+  }
+
+  .about-intro {
+    background-color: unset;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+
+    p {
+      width: 60%;
+      text-align: justify;
+    }
+  }
+
+  .my-story {
+    flex-basis: 100%;
+  }
 }

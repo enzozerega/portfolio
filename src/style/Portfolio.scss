@@ -1,0 +1,117 @@
+@import "./Variables.scss";
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: max-content;
+  margin: 0 10vw;
+  margin-top: 50px;
+
+  .articles-container {
+    background-color: $secondaryColor;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: max-content;
+    margin: 2rem 2vw;
+    border-radius: 4px;
+    h1 {
+      transform: translateY(-60px);
+      font-size: 3rem;
+      flex-basis: 100%;
+    }
+  }
+
+  article {
+    background-color: $backgroundColor;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    margin: 2rem 2vw;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+      0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+      0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+
+    .article-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+      &:hover .article-content {
+        transform: translateY(0);
+      }
+
+      .article-content {
+        transition: 0.3s;
+        transform: translateY(100%);
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $quaternaryColor;
+        width: inherit;
+        height: inherit;
+        color: black;
+        padding: 0 2rem;
+
+        .article-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            background-color: white;
+            border-radius: 4px;
+            margin: 20px;
+            padding: 2px 5px;
+            transition: 0.3s;
+            &:hover {
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+
+        .article-tags {
+          font-weight: bolder;
+          text-align: center;
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+  .portfolio-intro {
+    flex-basis: 100%;
+    background-color: unset;
+    display: flex;
+    justify-content: center;
+    height: unset;
+    min-height: unset;
+    max-height: unset;
+    box-shadow: unset;
+
+    p {
+      width: 60%;
+      text-align: justify;
+    }
+  }
+}
