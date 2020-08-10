@@ -79,11 +79,20 @@ const Portfolio = () => {
         <PortfolioItem
           title="MSc Thesis"
           description="Thesis I wrote to obtain my MSc in Geomatics"
-          tags="GIS, Sentinel-2, Machine Learning Algorithms"
+          tags="GIS, Sentinel-2, R, Machine Learning Algorithms"
           www="https://lup.lub.lu.se/student-papers/search/publication/8954922"
           label="Details"
           img={require("../img/geomatics.png")}
           imgScaled="../img/geomatics-scaled.png"
+        />
+        <PortfolioItem
+          title="ArcticDEM data management"
+          description="ArcGIS toolbox"
+          tags="Python, ArcPy, ArcticDEM, GIS"
+          www="https://www.nateko.lu.se/article/students-created-toolbox-for-gis-software"
+          label="Details"
+          img={require("../img/toolbox.png")}
+          imgScaled="../img/toolbox-scaled.png"
         />
         <PortfolioItem
           title="My Portfolio"

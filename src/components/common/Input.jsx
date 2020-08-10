@@ -1,18 +1,26 @@
 import React from "react";
 
-const Input = ({ name, label, value, error, onChange, placeholder }) => {
+const Input = ({
+  name,
+  label,
+  value,
+  error,
+  onChange,
+  placeholder,
+  extraClass,
+}) => {
   return (
-    <div className="form-group">
-      <span>{label}</span>
+    <div className={"form-group " + extraClass}>
+      <span className="label">{label}</span>
       <input
-        class="form-field"
+        className="form-field"
         value={value}
         onChange={onChange}
         type="text"
         id={name}
         placeholder={placeholder}
       />
-      {error && <span>{error}</span>}
+      {error && <span className="error">{error}</span>}
     </div>
   );
 };

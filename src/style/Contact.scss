@@ -1,12 +1,12 @@
 @import "./Variables.scss";
 
 .contact {
-  margin-top: 50px !important;
+  margin: 0 10vw;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: max-content;
-  margin: 0 10vw;
 
   .contact-intro {
     margin: 2rem 2vw;
@@ -40,8 +40,11 @@
     }
     .cta {
       padding: 1rem 0;
+      margin-bottom: 1rem;
       button {
         border-radius: 4px;
+        font-size: 1rem;
+        font-family: noto, serif;
         background-color: #dc143c;
         padding: 0.5rem;
         transition: 0.3s;
@@ -51,8 +54,78 @@
         }
         &:disabled {
           opacity: 0;
+          transform: scale(0.5);
+        }
+        &:focus {
+          outline: none;
         }
       }
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: min-content;
+    justify-content: center;
+    :focus-within > .label {
+      background-color: $labelFocus !important;
+      color: white;
+      border-color: $tertiaryColor;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin: 0 2vw;
+      .label {
+        width: max-content;
+        background: $label;
+        text-align: center;
+        margin-top: 2rem;
+        padding: 8px 12px;
+        color: whitesmoke;
+        border: none;
+        border-radius: 4px 4px 0 0;
+        transition: 0.2s;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
+          0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
+          0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        border-radius: 0 4px 4px 4px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04),
+          0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04),
+          0 16px 32px rgba(0, 0, 0, 0.04), 0 32px 64px rgba(0, 0, 0, 0.04);
+        transition: 0.2s;
+        &:focus {
+          outline: none;
+          border-color: $labelFocus;
+          box-shadow: 0 1px 2px rgba(164, 71, 87, 0.07),
+            0 2px 4px rgba(164, 71, 87, 0.07), 0 4px 8px rgba(164, 71, 87, 0.07),
+            0 8px 16px rgba(164, 71, 87, 0.07),
+            0 16px 32px rgba(164, 71, 87, 0.07),
+            0 32px 64px rgba(164, 71, 87, 0.07);
+        }
+      }
+      textarea {
+        resize: none;
+        line-height: 1.5rem;
+        height: 25vw;
+      }
+    }
+
+    .field-md {
+      width: 25vw;
+      min-width: 25vw;
+    }
+
+    .field-lg {
+      width: 54vw;
+      min-width: 54vw;
     }
   }
 
@@ -62,6 +135,24 @@
     flex-wrap: wrap;
   }
 }
+.error {
+  position: absolute;
+  left: 0;
+  bottom: -1.2rem;
+  font-size: 0.75rem;
+  transition: 0.2s;
+  color: $primaryColor;
+  animation: myAnimation 0.2s;
+}
+
+@keyframes myAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* 
 From https://codepen.io/aaroniker/pen/dybMVMB :
@@ -69,29 +160,22 @@ From https://codepen.io/aaroniker/pen/dybMVMB :
 
 :root {
   --input-color: #99a3ba;
-  --input-border: #cdd9ed;
+  --input-border: black;
   --input-background: #fff;
   --input-placeholder: #cbd1dc;
-  --input-border-focus: #275efe;
+  --input-border-focus: #ffc2c7;
   --group-color: var(--input-color);
   --group-border: var(--input-border);
-  --group-background: #eef4ff;
-  --group-color-focus: #fff;
-  --group-border-focus: var(--input-border-focus);
-  --group-background-focus: #678efe;
+  --group-background: blue;
 }
 
 .form-field {
-  display: block;
-  width: 90%;
   max-width: 100%;
   padding: 8px 16px;
   line-height: 25px;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
-  border-radius: 6px;
-  -webkit-appearance: none;
   color: var(--input-color);
   border: 1px solid var(--input-border);
   background: var(--input-background);
@@ -113,10 +197,6 @@ From https://codepen.io/aaroniker/pen/dybMVMB :
 .form-field::placeholder {
   color: var(--input-placeholder);
 }
-.form-field:focus {
-  outline: none;
-  border-color: var(--input-border-focus);
-}
 
 .form-field:disabled {
   background: rgba(230, 230, 230, 0.3);
@@ -132,48 +212,6 @@ From https://codepen.io/aaroniker/pen/dybMVMB :
   display: flex;
   width: 100%;
 }
-.form-group > span,
-.form-group .form-field {
-  white-space: nowrap;
-  display: block;
-}
-.form-group > span:not(:first-child):not(:last-child),
-.form-group .form-field:not(:first-child):not(:last-child) {
-  border-radius: 0;
-}
-.form-group > span:first-child,
-.form-group .form-field:first-child {
-  border-radius: 6px 0 0 6px;
-}
-.form-group > span:last-child,
-.form-group .form-field:last-child {
-  border-radius: 0 6px 6px 0;
-}
-.form-group > span:not(:first-child),
-.form-group .form-field:not(:first-child) {
-  margin-left: -1px;
-}
-.form-group .form-field {
-  position: relative;
-  -webkit-box-flex: 1;
-  flex: 1 1 auto;
-  width: 1%;
-  margin-top: 1.5rem;
-}
+
 .form-group > span {
-  text-align: center;
-  margin-top: 1.5rem;
-  padding: 8px 12px;
-  font-size: 14px;
-  line-height: 25px;
-  color: var(--group-color);
-  background: var(--group-background);
-  border: 1px solid var(--group-border);
-  -webkit-transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
-  transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
-}
-.form-group:focus-within > span {
-  color: var(--group-color-focus);
-  background: var(--group-background-focus);
-  border-color: var(--group-border-focus);
 }

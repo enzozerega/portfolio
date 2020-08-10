@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Form from "./common/Form";
 import { animation } from "./common/Animations";
+import sendEmail from "./common/Mail";
 import "../style/Contact.scss";
 import {
   FaGithub,
@@ -16,13 +17,17 @@ class Contact extends Form {
   state = {
     form: { name: "", email: "", message: "" },
     errors: {},
+    emailStatus: undefined,
   };
 
   doSubmit = () => {
-    console.log("Submitted");
+    const { name, email, message } = this.state.form;
+    const promise = sendEmail(name, email, message);
+    promise.then((emailStatus) => this.setState({ emailStatus }));
   };
 
   render() {
+    const { emailStatus } = this.state;
     return (
       <Fragment>
         <motion.section
@@ -42,13 +47,26 @@ class Contact extends Form {
           </article>
           <div className="contact-container">
             <h1>Send me a message</h1>
-            <form onSubmit={this.handleSubmit}>
-              {this.renderInput("name", "Write your name here")}
-              {this.renderInput("email", "email@example.com")}
-              {this.renderInput("message", "Write your message here")}
+            <form className="contact-form" onSubmit={this.handleSubmit}>
+              {this.renderInput("name", "Write your name here", "field-md")}
+              {this.renderInput("email", "email@example.com", "field-md")}
+              {this.renderTextArea(
+                "message",
+                "Write your message here",
+                "field-lg"
+              )}
               {this.renderButton("Send Message")}
             </form>
           </div>
+          {emailStatus === true && (
+            <div>Your message was sent. I will answer as soon as possible.</div>
+          )}
+          {emailStatus === false && (
+            <div>
+              There is a problem with the mail server. Please choose another
+              contact option or try again later.
+            </div>
+          )}
           <div className="social-container">
             <h2>More contact options</h2>
             <FaGithub />
