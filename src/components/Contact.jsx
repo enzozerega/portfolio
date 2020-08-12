@@ -3,13 +3,8 @@ import Form from "./common/Form";
 import { animation } from "./common/Animations";
 import sendEmail from "./common/Mail";
 import "../style/Contact.scss";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMdHappy, IoMdSad } from "react-icons/io";
 import { MdMail } from "react-icons/md";
 import { motion } from "framer-motion";
 
@@ -18,16 +13,19 @@ class Contact extends Form {
     form: { name: "", email: "", message: "" },
     errors: {},
     emailStatus: undefined,
+    hideClass: "",
   };
 
   doSubmit = () => {
     const { name, email, message } = this.state.form;
     const promise = sendEmail(name, email, message);
-    promise.then((emailStatus) => this.setState({ emailStatus }));
+    promise.then((emailStatus) =>
+      this.setState({ emailStatus, hideClass: "hidden" })
+    );
   };
 
   render() {
-    const { emailStatus } = this.state;
+    const { emailStatus, hideClass } = this.state;
     return (
       <Fragment>
         <motion.section
@@ -47,7 +45,10 @@ class Contact extends Form {
           </article>
           <div className="contact-container">
             <h1>Send me a message</h1>
-            <form className="contact-form" onSubmit={this.handleSubmit}>
+            <form
+              className={"contact-form " + hideClass}
+              onSubmit={this.handleSubmit}
+            >
               {this.renderInput("name", "Write your name here", "field-md")}
               {this.renderInput("email", "email@example.com", "field-md")}
               {this.renderTextArea(
@@ -57,24 +58,38 @@ class Contact extends Form {
               )}
               {this.renderButton("Send Message")}
             </form>
+            {emailStatus === true && (
+              <div className="email-response">
+                <p>
+                  Your message was sent. Thanks for writing to me. I will answer
+                  as soon as possible.
+                </p>
+                <IoMdHappy />
+              </div>
+            )}
+            {emailStatus === false && (
+              <div className="email-response">
+                <p>
+                  There is a problem with the mail server. Please choose another
+                  contact option or try again later.
+                </p>
+                <IoMdSad />
+              </div>
+            )}
           </div>
-          {emailStatus === true && (
-            <div>Your message was sent. I will answer as soon as possible.</div>
-          )}
-          {emailStatus === false && (
-            <div>
-              There is a problem with the mail server. Please choose another
-              contact option or try again later.
-            </div>
-          )}
           <div className="social-container">
             <h2>More contact options</h2>
-            <FaGithub />
-            <MdMail />
-            <FaLinkedin />
-            <FaFacebook />
-            <FaTwitter />
-            <FaInstagram />
+            <div className="social-links">
+              <a href="mailto:hello@enzozerega.com">
+                <MdMail /> hello@enzozerega.com
+              </a>
+              <a href="https://linkedin.com/in/enzo-zerega" target="_blank">
+                <FaLinkedin /> linkedin.com/in/enzo-zerega
+              </a>
+              <a href="https://github.com/enzozerega" target="_blank">
+                <FaGithub /> github.com/enzozerega
+              </a>
+            </div>
           </div>
         </motion.section>
       </Fragment>

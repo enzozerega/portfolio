@@ -17,7 +17,7 @@ const MyStory = () => {
       className="my-story-section"
     >
       <h2>Who I am</h2>
-      {/* <p>
+      <p>
         Hi. Thanks for wanting to know more about me. Here I describe some
         important moments of my past, including how I ended up where I am now,
         and what my hopes and dreams are for the future. This is a rather
@@ -138,7 +138,7 @@ const MyStory = () => {
         </span>
         – and talk about how we could save the world? Don't doubt on reaching me
         out if you think we should.
-      </p> */}
+      </p>
     </motion.section>
   );
 };

@@ -15,7 +15,7 @@ const App = () => {
   const location = useLocation();
   return (
     <Fragment>
-      <IconContext.Provider value={{ color: "red", size: "2rem" }}>
+      <IconContext.Provider value={{ color: "black", size: "2rem" }}>
         <NavBar />
         <main>
           <AnimatePresence initial={false} exitBeforeEnter>

@@ -75,6 +75,7 @@
     }
 
     .form-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       margin: 0 2vw;
@@ -94,6 +95,9 @@
       }
       input,
       textarea {
+        font-size: 1rem;
+        font-family: inherit;
+        padding: 0.3rem 0.6rem;
         width: 100%;
         border: none;
         border-radius: 0 4px 4px 4px;
@@ -109,6 +113,9 @@
             0 8px 16px rgba(164, 71, 87, 0.07),
             0 16px 32px rgba(164, 71, 87, 0.07),
             0 32px 64px rgba(164, 71, 87, 0.07);
+        }
+        &::placeholder {
+          color: #cbd1dc;
         }
       }
       textarea {
@@ -131,8 +138,30 @@
 
   .social-container {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      background-color: $backgroundColor;
+      width: max-content;
+      transform: translateY(1rem);
+    }
+
+    .social-links {
+      border: 2px solid black;
+      padding: 1rem;
+      a {
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin: 0 0.5rem;
+        }
+      }
+    }
   }
 }
 .error {
@@ -142,10 +171,10 @@
   font-size: 0.75rem;
   transition: 0.2s;
   color: $primaryColor;
-  animation: myAnimation 0.2s;
+  animation: errorAnimation 0.2s;
 }
 
-@keyframes myAnimation {
+@keyframes errorAnimation {
   from {
     opacity: 0;
   }
@@ -154,64 +183,19 @@
   }
 }
 
-/* 
-From https://codepen.io/aaroniker/pen/dybMVMB :
-*/
-
-:root {
-  --input-color: #99a3ba;
-  --input-border: black;
-  --input-background: #fff;
-  --input-placeholder: #cbd1dc;
-  --input-border-focus: #ffc2c7;
-  --group-color: var(--input-color);
-  --group-border: var(--input-border);
-  --group-background: blue;
+.hidden {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: 0.2s;
 }
 
-.form-field {
-  max-width: 100%;
-  padding: 8px 16px;
-  line-height: 25px;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: inherit;
-  color: var(--input-color);
-  border: 1px solid var(--input-border);
-  background: var(--input-background);
-  -webkit-transition: border 0.3s ease;
-  transition: border 0.3s ease;
-}
-.form-field::-webkit-input-placeholder {
-  color: var(--input-placeholder);
-}
-.form-field::-moz-placeholder {
-  color: var(--input-placeholder);
-}
-.form-field:-ms-input-placeholder {
-  color: var(--input-placeholder);
-}
-.form-field::-ms-input-placeholder {
-  color: var(--input-placeholder);
-}
-.form-field::placeholder {
-  color: var(--input-placeholder);
-}
-
-.form-field:disabled {
-  background: rgba(230, 230, 230, 0.3);
-}
-
-.label-disabled {
-  background: rgb(230, 230, 230) !important;
-}
-
-.form-group {
-  position: relative;
-  display: -webkit-box;
-  display: flex;
-  width: 100%;
-}
-
-.form-group > span {
+.email-response {
+  position: absolute;
+  top: 20%;
+  height: 35rem;
+  padding: 25% 25% 0 25%;
+  text-align: center;
+  p {
+    margin-bottom: 2rem;
+  }
 }

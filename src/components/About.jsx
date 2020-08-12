@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { animation } from "./common/Animations";
 import "../style/About.scss";
 import { Link } from "react-router-dom";
+import MyStory from "./MyStory";
+import Education from "./Education";
+import Skills from "./Skills";
 
 const About = () => {
   return (
@@ -16,28 +19,32 @@ const About = () => {
       >
         <article className="about-intro">
           <p>
-            Thanks for wanting to know more about me. Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Minus assumenda accusamus qui
-            praesentium, fuga sed a similique veritatis iste perferendis
-            corporis cupiditate delectus quidem! Eum incidunt blanditiis quasi
-            cum molestiae.
+            Hi! My name is Enzo, I’m currently based on Stockholm and on 2019 I
+            decided to start a career on web development. That same year I
+            started a training to become a{" "}
+            <strong>Full Stack developer </strong>
+            at Chas Academy. Currently, and after more than one year of
+            training, I’m looking for a company where I can continue growing as
+            a web developer during a 6-months <strong>internship</strong>.
+          </p>
+          <p>
+            You will find my educational background, skills and a more in-depth
+            presentation on the sections bellow. Don’t doubt on contacting me if
+            you have any questions.
           </p>
         </article>
         <article className="education">
           <h1>Education</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae illo
-            accusantium voluptatem sit quaerat doloribus, facilis corrupti ad,
-            harum rem consequuntur inventore! Corporis pariatur adipisci
-            recusandae eligendi eaque iure at.
-          </p>
+          <Education />
         </article>
         <article className="skills">
           <h1>Skills</h1>
+          <Skills />
         </article>
         <article className="my-story">
           <h1>My Story</h1>
           <div className="cta">
+            <MyStory />
             <Link to="/contact">Contact me</Link>
           </div>
         </article>

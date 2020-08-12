@@ -1,0 +1,22 @@
+@import "./Variables.scss";
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .skills-item {
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 1rem;
+
+    img {
+      object-fit: contain;
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
