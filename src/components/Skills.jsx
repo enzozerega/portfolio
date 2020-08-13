@@ -5,90 +5,141 @@ const skillsData = [
   {
     name: "React",
     img: "react.png",
+    tag: "frameworks",
   },
   {
     name: "Angular",
     img: "angular.png",
+    tag: "frameworks",
   },
   {
     name: "PHP",
     img: "php.png",
+    tag: "languages",
   },
   {
     name: "ArcGIS",
     img: "arcgis.png",
+    tag: "tools",
   },
   {
     name: "PostgreSQL",
     img: "postgresql.png",
+    tag: "databases",
   },
   {
     name: "Docker",
     img: "docker.png",
+    tag: "tools",
   },
   {
     name: "Vagrant",
     img: "vagrant.png",
+    tag: "tools",
   },
   {
     name: "PostGIS",
     img: "postgis.png",
+    tag: "databases",
   },
   {
     name: "R",
     img: "r.png",
+    tag: "languages",
   },
   {
     name: "CSS3",
     img: "css3.png",
+    tag: "languages",
   },
   {
     name: "HTML5",
     img: "html5.png",
+    tag: "languages",
   },
   {
     name: "MongoDB",
     img: "mongodb.png",
+    tag: "databases",
   },
   {
     name: "JavaScript",
     img: "javascript.png",
+    tag: "languages",
   },
   {
     name: "Laravel",
     img: "laravel.png",
+    tag: "frameworks",
   },
   {
     name: "MySQL",
     img: "mysql.png",
+    tag: "databases",
   },
   {
     name: "Python",
     img: "python.png",
+    tag: "languages",
   },
   {
     name: "Express",
     img: "express.png",
+    tag: "frameworks",
   },
   {
-    name: "Node",
+    name: "Node.js",
     img: "node.png",
+    tag: "tools",
+  },
+  {
+    name: "WordPress",
+    img: "wordpress.png",
+    tag: "tools",
   },
 ];
 
 const SkillsItem = ({ data }) => (
   <div className="skills-item">
     <img src={require(`../img/${data.img}`)} alt="" />
-    <h3>{data.name}</h3>
+    <h4>{data.name}</h4>
   </div>
 );
 
 const Skills = () =>
   skillsData.length > 0 && (
     <div className="skills-container">
-      {skillsData.map((data, idx) => (
-        <SkillsItem data={data} key={idx} />
-      ))}
+      <div className="skills-languages">
+        <h3>Languages</h3>
+        {skillsData.map(
+          (data, idx) =>
+            data.tag === "languages" && <SkillsItem data={data} key={idx} />
+        )}
+      </div>
+
+      <div className="skills-framworks">
+        <h3>Frameworks</h3>
+        {skillsData.map(
+          (data, idx) =>
+            data.tag === "frameworks" && <SkillsItem data={data} key={idx} />
+        )}
+      </div>
+
+      <div className="skills-framworks">
+        <h3>Databases</h3>
+        {skillsData.map(
+          (data, idx) =>
+            data.tag === "databases" && <SkillsItem data={data} key={idx} />
+        )}
+      </div>
+
+      <div className="skills-framworks">
+        <h3>Tools</h3>
+        {skillsData.map(
+          (data, idx) =>
+            data.tag === "tools" && <SkillsItem data={data} key={idx} />
+        )}
+      </div>
     </div>
   );
 
