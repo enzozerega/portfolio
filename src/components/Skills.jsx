@@ -3,6 +3,11 @@ import "../style/Skills.scss";
 
 const skillsData = [
   {
+    name: "JavaScript",
+    img: "javascript.png",
+    tag: "languages",
+  },
+  {
     name: "React",
     img: "react.png",
     tag: "frameworks",
@@ -18,16 +23,6 @@ const skillsData = [
     tag: "languages",
   },
   {
-    name: "ArcGIS",
-    img: "arcgis.png",
-    tag: "tools",
-  },
-  {
-    name: "PostgreSQL",
-    img: "postgresql.png",
-    tag: "databases",
-  },
-  {
     name: "Docker",
     img: "docker.png",
     tag: "tools",
@@ -38,13 +33,8 @@ const skillsData = [
     tag: "tools",
   },
   {
-    name: "PostGIS",
-    img: "postgis.png",
-    tag: "databases",
-  },
-  {
-    name: "R",
-    img: "r.png",
+    name: "HTML5",
+    img: "html5.png",
     tag: "languages",
   },
   {
@@ -53,9 +43,9 @@ const skillsData = [
     tag: "languages",
   },
   {
-    name: "HTML5",
-    img: "html5.png",
-    tag: "languages",
+    name: "MySQL",
+    img: "mysql.png",
+    tag: "databases",
   },
   {
     name: "MongoDB",
@@ -63,19 +53,9 @@ const skillsData = [
     tag: "databases",
   },
   {
-    name: "JavaScript",
-    img: "javascript.png",
-    tag: "languages",
-  },
-  {
     name: "Laravel",
     img: "laravel.png",
     tag: "frameworks",
-  },
-  {
-    name: "MySQL",
-    img: "mysql.png",
-    tag: "databases",
   },
   {
     name: "Python",
@@ -95,6 +75,31 @@ const skillsData = [
   {
     name: "WordPress",
     img: "wordpress.png",
+    tag: "tools",
+  },
+  {
+    name: "Git",
+    img: "git.png",
+    tag: "tools",
+  },
+  {
+    name: "R",
+    img: "r.png",
+    tag: "languages",
+  },
+  {
+    name: "PostgreSQL",
+    img: "postgresql.png",
+    tag: "databases",
+  },
+  {
+    name: "ArcGIS",
+    img: "arcgis.png",
+    tag: "tools",
+  },
+  {
+    name: "PostGIS",
+    img: "postgis.png",
     tag: "tools",
   },
 ];

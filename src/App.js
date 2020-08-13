@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import Footer from "./components/Footer";
 import { IconContext } from "react-icons";
+import BDThesis from "./components/BDThesis";
 
 const App = () => {
   const location = useLocation();
@@ -25,6 +26,7 @@ const App = () => {
               <Route path="/contact" component={Contact} />
               <Route path="/not-found" exact component={NotFound} />
               <Route path="/" exact component={Home} />
+              <Route path="/pdf/BD_Thesis_Enzo_Zerega" component={BDThesis} />
               <Redirect to="/not-found" />
             </Switch>
           </AnimatePresence>

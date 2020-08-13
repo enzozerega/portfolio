@@ -30,7 +30,7 @@ const Home = () => {
         className="hero-image"
       >
         <ProgressiveImage
-          src={require("../img/portrait.jpg")}
+          src={require("../img/portrait.png")}
           placeholder={require("../img/portrait-scaled.jpg")}
         >
           {(src) => <img src={src} alt="" />}

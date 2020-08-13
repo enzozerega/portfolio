@@ -3,30 +3,32 @@ import React from "react";
 const timelineData = [
   {
     text: "Web Development student",
-    date: "2019 - Now",
-    details: "Full Stack Development",
+    date: "2019",
+    details: "Full Stack Development program. Currently on my second year.",
     place: "Chas Academy",
     link: {
-      url: "https://github.com/florinpop17/app-ideas",
-      text: "Check it out on GitHub",
+      url: "https://kunskapsbasen.chas.school/",
+      text: "Details",
     },
   },
   {
     text: "MSc in Geomatics",
-    date: "2016-2018",
+    date: "2018",
     place: "Lund University",
+    details: `Thesis: "Assessing edge pixel classification in forest stands using a machine learning algorithm and Sentinel-2 data."`,
     link: {
-      url: "https://florin-pop/blog/2019/03/weekly-coding-challenge/",
-      text: "Check it out here",
+      url: "https://lup.lub.lu.se/student-papers/search/publication/8954922",
+      text: "Details",
     },
   },
   {
     text: "Agronomy Engineer",
-    date: "2008-2013",
+    date: "2014",
     place: "Pontifical Catholic University of Chile",
+    details: `Mayor in environmental management. Thesis: "Assessment of the Metropolitan Regulation Plan in rural and biodiversity conservation areas".`,
     link: {
-      url: "https://florin-pop/blog/2019/03/weekly-coding-challenge/",
-      text: "Check it out here",
+      url: "../../pdf/BD_Thesis_Enzo_Zerega",
+      text: "Details",
     },
   },
 ];
@@ -37,19 +39,23 @@ const TimelineItem = ({ data }) => (
       <time>{data.date}</time>
       <p className="timeline-title">{data.text}</p>
       <p className="timeline-place">{data.place}</p>
-      {/* <p className="timeline-details">{data.details}</p>
-      {data.link && (
-        <a href={data.link.url} target="_blank" rel="noopener noreferrer">
-          {data.link.text}
-        </a>
-      )} */}
-      <span className="circle" />
+      <div className="timeline-details">
+        <p>
+          {data.details}{" "}
+          {data.link && (
+            <a href={data.link.url} target="_blank">
+              {data.link.text}
+            </a>
+          )}
+        </p>
+      </div>
     </div>
-    <div className="timeline-item-content-overlay">
+    <span className="circle" />
+    {/* <div className="timeline-item-content-overlay">
       <div className="timeline-overlay-content">
         <p>Hello</p>
       </div>
-    </div>
+    </div> */}
   </div>
 );
 
