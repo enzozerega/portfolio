@@ -1,5 +1,4 @@
 import React from "react";
-import ProgressiveImage from "react-progressive-image";
 
 const PortfolioItem = ({
   title,
@@ -13,9 +12,7 @@ const PortfolioItem = ({
 }) => {
   return (
     <article>
-      <ProgressiveImage src={img} placeholder={imgScaled}>
-        {(src) => <img src={src} alt="" />}
-      </ProgressiveImage>
+      <img src={img} alt="" />
       <div className="article-overlay">
         <div className="article-content">
           <h2>{title}</h2>

@@ -10,7 +10,7 @@ class NavBar extends Component {
     return (
       <header>
         <nav>
-          <Link className="nav-home-link" to="/">
+          <a className="nav-home-link" href="/">
             <motion.div
               whileHover={{ fontStretch: 2, opacity: 0 }}
               transition={this.transition}
@@ -18,7 +18,7 @@ class NavBar extends Component {
             >
               <div className="img" />
             </motion.div>
-          </Link>
+          </a>
           <ul>
             <li>
               <NavLink className="navbar-item" to="/about">

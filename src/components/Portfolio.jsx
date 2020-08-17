@@ -85,13 +85,15 @@ const Portfolio = () => {
           img={require("../img/toolbox.png")}
           imgScaled="../img/toolbox-scaled.png"
         />
-        {/* <PortfolioItem
+        <PortfolioItem
           title="My Portfolio"
           description="My web developer portfolio"
           tags="React, SCSS, Google Cloud"
           www="https://enzozerega.com"
           github="https://github.com/enzozerega/portfolio"
-        /> */}
+          img={require("../img/portfolio.png")}
+          imgScaled="../img/portfolio-scaled.png"
+        />
         <PortfolioItem
           title="Magic Crystals"
           description="Online store. My first website ever!"

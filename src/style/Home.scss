@@ -21,6 +21,8 @@
       order: 2;
       transform: unset !important;
       text-align: center;
+      margin-top: 5vh;
+      height: 20vh;
     }
 
     .hero-title-content {
@@ -54,21 +56,65 @@
       width: 100vw;
       min-width: unset;
       max-width: unset;
-      height: 60vh;
+      height: 50vh;
       min-height: 300px;
       max-height: unset;
     }
-
-    img {
-      width: 100%;
-      @media screen and (max-width: $wideScreen) {
-        width: 130%;
-        transform: translateX(-50px);
-      }
-      @media screen and (max-width: $desktop) {
-        width: 100%;
-        transform: translateY(-50px);
-      }
-    }
   }
+}
+.placeholder {
+  position: relative;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  min-height: 100vh;
+  max-width: 100vh;
+  width: 50vw;
+  min-width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  @media screen and (max-width: $desktop) {
+    width: 100vw;
+    min-width: unset;
+    max-width: unset;
+    min-height: 300px;
+    max-height: unset;
+  }
+}
+
+.placeholder img {
+  position: absolute;
+  opacity: 0;
+  top: -10056px;
+  bottom: -9999px;
+  left: -9903px;
+  right: -9999px;
+  margin: auto;
+  width: calc(1400px - 18vw);
+  transition: opacity 0.5s linear;
+  @media screen and (max-width: $desktop) {
+    width: calc(1560px - 15vw);
+    top: -10208px;
+    left: -9879px;
+  }
+  @media screen and (max-width: $phone) {
+    left: -9859px;
+  }
+  // @media screen and (max-width: $wideScreen) {
+  //   width: calc(1300px - 20vw);
+  //   top: -25vw;
+  //   left: calc(100px - 20vw);
+  // }
+}
+
+.placeholder img.loaded {
+  opacity: 1;
+}
+
+.img-small {
+  filter: blur(50px);
+  /* this is needed so Safari keeps sharp edges */
+  transform: scale(1);
 }
