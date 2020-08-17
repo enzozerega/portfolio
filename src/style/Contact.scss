@@ -1,46 +1,65 @@
 @import "./Variables.scss";
 
 .contact {
-  margin: 0 10vw;
+  margin: 0 15vw;
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   height: max-content;
+  @media screen and (max-width: $ultraWideScreen) {
+    margin: 0 10vw;
+  }
+  @media screen and (max-width: $desktop) {
+    margin: 0;
+  }
 
   .contact-intro {
-    margin: 2rem 2vw;
-    border-radius: 4px;
-    position: relative;
-    overflow: hidden;
+    background-color: unset;
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 0 2rem 0;
 
     p {
-      width: 60%;
+      margin-bottom: 1rem;
       text-align: justify;
+      width: 45rem;
+      @media screen and (max-width: $desktop) {
+        width: 90%;
+      }
     }
   }
 
   .contact-container {
     background-color: $secondaryColor;
-    flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: max-content;
     margin: 2rem 2vw;
     border-radius: 4px;
-
+    padding-bottom: 2rem;
+    @media screen and (max-width: $desktop) {
+      width: 90%;
+      margin: 2rem 0;
+    }
     h1 {
       transform: translateY(-60px);
       font-size: 3rem;
       flex-basis: 100%;
+      @media screen and (max-width: $tablet) {
+        transform: translateY(-45px);
+      }
     }
     .cta {
       padding: 1rem 0;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
+      width: max-content;
+      flex-basis: 100%;
+      text-align: center;
       button {
         border-radius: 4px;
         font-size: 1rem;
@@ -66,19 +85,22 @@
   .contact-form {
     display: flex;
     flex-wrap: wrap;
-    width: min-content;
     justify-content: center;
+    margin: 0 2rem;
     :focus-within > .label {
       background-color: $labelFocus !important;
       color: white;
       border-color: $tertiaryColor;
+    }
+    @media screen and (max-width: $wideScreen) {
+      align-items: left;
+      justify-content: left;
     }
 
     .form-group {
       position: relative;
       display: flex;
       flex-direction: column;
-      margin: 0 2vw;
       .label {
         width: max-content;
         background: $label;
@@ -121,18 +143,33 @@
       textarea {
         resize: none;
         line-height: 1.5rem;
-        height: 25vw;
+        height: 15vw;
+        min-height: 15rem;
       }
     }
 
     .field-md {
-      width: 25vw;
-      min-width: 25vw;
+      width: 22rem;
+      @media screen and (max-width: $wideScreen) {
+        width: 100%;
+        max-width: 30rem;
+      }
+
+      &:first-child {
+        margin-right: 1rem;
+        @media screen and (max-width: $wideScreen) {
+          margin-right: unset;
+        }
+      }
     }
 
     .field-lg {
-      width: 54vw;
-      min-width: 54vw;
+      max-width: 45rem;
+      flex-basis: 100%;
+      @media screen and (max-width: $wideScreen) {
+        width: 100%;
+        max-width: unset;
+      }
     }
   }
 
@@ -142,6 +179,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-basis: 100%;
 
     h2 {
       background-color: $backgroundColor;
@@ -192,10 +230,14 @@
 .email-response {
   position: absolute;
   top: 20%;
-  height: 35rem;
-  padding: 25% 25% 0 25%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
   p {
+    padding: 0 10%;
     margin-bottom: 2rem;
   }
 }

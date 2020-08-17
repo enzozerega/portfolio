@@ -5,22 +5,35 @@
   flex-wrap: wrap;
   justify-content: center;
   height: max-content;
-  margin: 0 10vw;
+  margin: 0 15vw;
   margin-top: 50px;
+  @media screen and (max-width: $ultraWideScreen) {
+    margin: 0 10vw;
+  }
+  @media screen and (max-width: $desktop) {
+    margin: 0;
+  }
 
   .articles-container {
     background-color: $secondaryColor;
-    flex-basis: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     height: max-content;
     margin: 2rem 2vw;
     border-radius: 4px;
+    padding-bottom: 2rem;
+    @media screen and (max-width: $desktop) {
+      width: 90%;
+      margin: 2rem 0;
+    }
     h1 {
       transform: translateY(-60px);
       font-size: 3rem;
       flex-basis: 100%;
+      @media screen and (max-width: $tablet) {
+        transform: translateY(-45px);
+      }
     }
   }
 
@@ -31,18 +44,28 @@
     height: 300px;
     min-height: 300px;
     max-height: 300px;
-    margin: 2rem 2vw;
+    margin: 2rem 3vw;
     border-radius: 4px;
     position: relative;
     display: inline-block;
     overflow: hidden;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-      0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-      0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    box-shadow: $shadow;
+    @media screen and (max-width: $tablet) {
+      max-width: 500px;
+      min-width: unset;
+      width: 100%;
+      min-height: unset;
+      height: max-content;
+    }
 
     img {
       width: auto;
-      height: 100%;
+      height: 101%;
+      display: block;
+      @media screen and (max-width: $tablet) {
+        width: 100%;
+        height: auto;
+      }
     }
 
     .article-overlay {
@@ -108,10 +131,17 @@
     min-height: unset;
     max-height: unset;
     box-shadow: unset;
-
+    margin: 100px 0 2rem 0;
+    @media screen and (max-width: $tablet) {
+      max-width: unset;
+    }
     p {
-      width: 60%;
+      width: 45rem;
       text-align: justify;
+      @media screen and (max-width: $desktop) {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

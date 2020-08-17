@@ -37,14 +37,13 @@ class Contact extends Form {
         >
           <article className="contact-intro">
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
-              hic doloribus omnis pariatur reprehenderit quaerat iusto, veniam
-              quasi veritatis esse? Alias consequuntur quo cupiditate architecto
-              delectus maxime cum vel. Ullam!
+              Feel free to contact me if you want to know more about me. You can
+              reach out to me through different platforms. Choose the one that
+              suits you best.
             </p>
           </article>
           <div className="contact-container">
-            <h1>Send me a message</h1>
+            <h1>Contact me</h1>
             <form
               className={"contact-form " + hideClass}
               onSubmit={this.handleSubmit}

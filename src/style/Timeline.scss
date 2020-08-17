@@ -4,8 +4,16 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 2rem 0;
-  padding: 0 2rem;
+  margin: 0 0 2rem 0;
+  padding: 0 2.4rem;
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 3.2rem;
+  }
+
+  @media screen and (max-width: $phone) {
+    padding: 0;
+  }
 }
 
 .timeline-container::after {
@@ -15,6 +23,10 @@
   left: 20%;
   width: 4px;
   height: 100%;
+
+  @media screen and (max-width: $phone) {
+    left: 12%;
+  }
 }
 
 .timeline-item {
@@ -41,6 +53,18 @@
   height: inherit;
   transition: 0.2s;
   overflow: hidden;
+
+  @media screen and (max-width: $wideScreen) {
+    width: 14rem;
+  }
+
+  @media screen and (max-width: $desktop) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 14rem;
+  }
 
   &:hover {
     height: 8rem;
@@ -80,28 +104,6 @@
   width: 20px;
   height: 20px;
   z-index: 100;
-}
-
-@media only screen and (max-width: 1023px) {
-  .timeline-item-content {
-    max-width: 100%;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .timeline-item-content {
-    padding: 15px 10px;
-    text-align: center;
-    align-items: center;
-  }
-
-  .timeline-item-content time {
-    margin-top: 20px;
-  }
-
-  .timeline-item-content a {
-    text-decoration: underline;
-  }
 }
 
 .timeline-place {

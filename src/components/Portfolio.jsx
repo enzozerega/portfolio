@@ -15,32 +15,13 @@ const Portfolio = () => {
     >
       <article className="portfolio-intro">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic
-          doloribus omnis pariatur reprehenderit quaerat iusto, veniam quasi
-          veritatis esse? Alias consequuntur quo cupiditate architecto delectus
-          maxime cum vel. Ullam!
+          Welcome to my portfolio. As I'm still a student, most of the projects
+          listed here represent assignments I've made during my training as a
+          developer.
         </p>
       </article>
       <div className="articles-container">
         <h1>My Projects</h1>
-        <PortfolioItem
-          title="Magic Crystals"
-          description="Online store. My first website ever!"
-          tags="HTML, CSS"
-          github="https://github.com/enzozerega/u01-static-website"
-          www="http://enzo.zerega.chas.academy/u01-static-website/"
-          img={require("../img/magic-crystals.png")}
-          imgScaled="../img/magic-crystals-scaled.png"
-        />
-        <PortfolioItem
-          title="Hangman"
-          description="A simple game"
-          tags="HTML, CSS, JavaScript"
-          github="https://github.com/enzozerega/u03-javascript-hangman"
-          www="http://enzo.zerega.chas.academy/u03-javascript-hangman/"
-          img={require("../img/hangman.png")}
-          imgScaled="../img/hangman-scaled.png"
-        />
         <PortfolioItem
           title="Car Rental"
           description="Register system for a car rental company"
@@ -51,6 +32,15 @@ const Portfolio = () => {
           imgScaled="../img/carrental-scaled.png"
         />
         <PortfolioItem
+          title="Weather App"
+          description="Check the weather"
+          tags="React, CSS, The Movie Database API"
+          github="https://github.com/enzozerega/u09-react-weather-app"
+          www="https://u09-react-weather-app.web.app/"
+          img={require("../img/weatherapp.png")}
+          imgScaled="../img/weatherapp-scaled.png"
+        />
+        <PortfolioItem
           title="Movies App"
           description="Find movies and actors"
           tags="Angular, TypeScript, OpenWeatherMap API"
@@ -59,14 +49,15 @@ const Portfolio = () => {
           img={require("../img/movieapp.png")}
           imgScaled="../img/movieapp-scaled.png"
         />
+
         <PortfolioItem
-          title="Weather App"
-          description="Check the weather"
-          tags="React, CSS, The Movie Database API"
-          github="https://github.com/enzozerega/u09-react-weather-app"
-          www="https://u09-react-weather-app.web.app/"
-          img={require("../img/weatherapp.png")}
-          imgScaled="../img/weatherapp-scaled.png"
+          title="Hangman"
+          description="A simple game"
+          tags="HTML, CSS, JavaScript"
+          github="https://github.com/enzozerega/u03-javascript-hangman"
+          www="http://enzo.zerega.chas.academy/u03-javascript-hangman/"
+          img={require("../img/hangman.png")}
+          imgScaled="../img/hangman-scaled.png"
         />
         <PortfolioItem
           title="Speak Out"
@@ -94,12 +85,21 @@ const Portfolio = () => {
           img={require("../img/toolbox.png")}
           imgScaled="../img/toolbox-scaled.png"
         />
-        <PortfolioItem
+        {/* <PortfolioItem
           title="My Portfolio"
           description="My web developer portfolio"
           tags="React, SCSS, Google Cloud"
           www="https://enzozerega.com"
           github="https://github.com/enzozerega/portfolio"
+        /> */}
+        <PortfolioItem
+          title="Magic Crystals"
+          description="Online store. My first website ever!"
+          tags="HTML, CSS"
+          github="https://github.com/enzozerega/u01-static-website"
+          www="http://enzo.zerega.chas.academy/u01-static-website/"
+          img={require("../img/magic-crystals.png")}
+          imgScaled="../img/magic-crystals-scaled.png"
         />
       </div>
     </motion.section>

@@ -12,7 +12,7 @@ export const animation = {
   },
   exit: {
     opacity: 0,
-    translateY: -200,
+    translateY: -150,
     transition: {
       duration: 0.2,
       ease: [0.43, 0.13, 0.23, 0.96],

@@ -5,18 +5,38 @@
   flex-wrap: wrap;
   justify-content: center;
   height: max-content;
-  margin: 0 10vw;
+  margin: 0 15vw;
   margin-top: 50px;
+  @media screen and (max-width: $ultraWideScreen) {
+    margin: 0 10vw;
+  }
+  @media screen and (max-width: $wideScreen) {
+    margin: 0;
+  }
 
   article {
     background-color: $secondaryColor;
-    width: 36vw;
-    min-width: 36vw;
+    width: 31vw;
     margin: 2rem 2vw;
     border-radius: 4px;
+    @media screen and (max-width: $ultraWideScreen) {
+      width: 34vw;
+    }
+    @media screen and (max-width: $wideScreen) {
+      width: 45vw;
+    }
+    @media screen and (max-width: $desktop) {
+      width: 90%;
+      margin: 2rem 0;
+    }
+
     h1 {
       transform: translateY(-60px);
       font-size: 3rem;
+
+      @media screen and (max-width: $tablet) {
+        transform: translateY(-45px);
+      }
     }
   }
 
@@ -27,16 +47,47 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 100px 0 2rem 0;
 
     p {
       margin-bottom: 1rem;
-      width: 60%;
       text-align: justify;
+      width: 45rem;
+      @media screen and (max-width: $desktop) {
+        width: 90%;
+      }
     }
   }
 
+  .education {
+    height: max-content;
+  }
+
   .my-story {
-    flex-basis: 100%;
+    flex-basis: 96%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $ultraWideScreen) {
+      margin: 2rem 4vw;
+    }
+    @media screen and (max-width: $wideScreen) {
+      margin: 2rem 3vw;
+    }
+    @media screen and (max-width: $desktop) {
+      margin: 2rem 5vw;
+    }
+
+    h1 {
+      text-align: left;
+      width: 100%;
+    }
+
+    .cta {
+      text-align: center;
+      transform: translateY(-2rem);
+    }
   }
 }
 
@@ -45,4 +96,9 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+strong {
+  background-color: $secondaryColor;
+  padding: 0 0.2rem;
 }
