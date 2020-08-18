@@ -24,6 +24,9 @@
       margin-top: 5vh;
       height: 20vh;
     }
+    @media screen and (max-height: 600px) {
+      height: unset;
+    }
 
     .hero-title-content {
       h1 {
@@ -48,6 +51,9 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
+    @media screen and (max-height: 314px) {
+      display: none;
+    }
     @media screen and (max-width: $desktop) {
       position: unset;
       top: unset;

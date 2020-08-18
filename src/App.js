@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import "./style/App.scss";
-import { Route, Switch, Redirect, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { Route, Switch, useLocation, Redirect } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
@@ -10,6 +9,7 @@ import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import { IconContext } from "react-icons";
 import BDThesis from "./components/BDThesis";
+import { AnimatePresence, motion } from "framer-motion";
 
 const App = () => {
   const location = useLocation();
@@ -19,14 +19,16 @@ const App = () => {
         <NavBar />
         <main>
           <AnimatePresence initial={false} exitBeforeEnter>
-            <Switch location={location} key={location.pathname}>
+            <Switch location={location} key={location.key}>
+              <Route exact path="/" component={Home} />
               <Route path="/about" component={About} />
               <Route path="/portfolio" component={Portfolio} />
               <Route path="/contact" component={Contact} />
-              <Route path="/not-found" exact component={NotFound} />
-              <Route path="/" exact component={Home} />
+              <Route path="/not-found" component={NotFound} />
               <Route path="/pdf/BD_Thesis_Enzo_Zerega" component={BDThesis} />
-              <Redirect to="/not-found" />
+              <motion.Fragment exit="undefined">
+                <Redirect to="/not-found" />
+              </motion.Fragment>
             </Switch>
           </AnimatePresence>
         </main>

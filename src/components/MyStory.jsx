@@ -29,10 +29,11 @@ const MyStory = () => {
         has taken me quite some time to figure out what I want to do with my
         life. How can I contribute to the world? –it's a question that is often
         on my mind these days. I'm currently studying
-        <strong> Web Development </strong>. I'm almost done with all my courses
-        and looking for a place where I could do my internship (LIA). When I'm
-        not studing or doing online tutorials about web development, I can be
-        found walking in nature or discovering new places in the city.
+        <strong> Web Development</strong> at Chas Academy. I'm almost done with
+        all my courses and looking for a place where I could do my internship
+        (LIA). When I'm not studing or doing online tutorials about web
+        development, I can be found walking in nature or discovering new places
+        in the city.
       </p>
       <h2>How I got into web developtment</h2>
       <p>
@@ -98,7 +99,7 @@ const MyStory = () => {
         a clue: it involves the World Wide Web and science. It took me some
         months to decide what my next step was going to be, but I ended up
         choosing to start a journey for becoming a developer.
-        <strong> Full Stack Development </strong> was the program that better
+        <strong> Full Stack Development</strong> was the program that better
         suited my aspirations. So on 2019 I started a 2-year vocational
         education and training program (VET) on the subject at Chas Academy.
         Here I was trained on the use of HTML, CSS, JavaScript (Vanilla, Angular

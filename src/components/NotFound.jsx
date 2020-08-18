@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { animation } from "./common/Animations";
 import "../style/NotFound.scss";
 
-const NotFOund = () => {
+const NotFound = () => {
   return (
     <motion.section
       variants={animation}
@@ -18,4 +18,4 @@ const NotFOund = () => {
   );
 };
 
-export default NotFOund;
+export default NotFound;
