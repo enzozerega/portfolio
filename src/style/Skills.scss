@@ -1,0 +1,51 @@
+@import "./Variables.scss";
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 4rem 2rem 4rem;
+
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $backgroundColor;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    padding: 0.4rem 1rem;
+    box-shadow: $shadowSmall;
+
+    h3 {
+      flex-basis: 100%;
+      font-size: 1rem;
+      font-weight: lighter;
+    }
+
+    .skills-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: max-content;
+      background-color: $tertiaryColor;
+      box-shadow: unset;
+      margin: 0.3rem 0.4rem;
+      padding: unset;
+
+      h4 {
+        font-size: 0.7rem;
+        font-weight: normal;
+        padding: 0 0.2rem 0.2rem 0.2rem;
+      }
+
+      img {
+        object-fit: contain;
+        padding: 0.2rem 0;
+        margin: 0 0.2rem;
+        filter: grayscale(100%);
+        width: 1.8rem;
+        height: 1.8rem;
+      }
+    }
+  }
+}

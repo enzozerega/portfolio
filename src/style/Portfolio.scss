@@ -1,0 +1,147 @@
+@import "./Variables.scss";
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: max-content;
+  margin: 0 15vw;
+  margin-top: 50px;
+  @media screen and (max-width: $ultraWideScreen) {
+    margin: 0 10vw;
+  }
+  @media screen and (max-width: $desktop) {
+    margin: 0;
+  }
+
+  .articles-container {
+    background-color: $secondaryColor;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: max-content;
+    margin: 2rem 2vw;
+    border-radius: 4px;
+    padding-bottom: 2rem;
+    @media screen and (max-width: $desktop) {
+      width: 90%;
+      margin: 2rem 0;
+    }
+    h1 {
+      transform: translateY(-60px);
+      font-size: 3rem;
+      flex-basis: 100%;
+      @media screen and (max-width: $tablet) {
+        transform: translateY(-45px);
+      }
+    }
+  }
+
+  article {
+    background-color: $backgroundColor;
+    width: 500px;
+    min-width: 500px;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    margin: 2rem 3vw;
+    border-radius: 4px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: $shadow;
+    @media screen and (max-width: $tablet) {
+      max-width: 500px;
+      min-width: unset;
+      width: 100%;
+      min-height: unset;
+      height: max-content;
+    }
+
+    img {
+      width: auto;
+      height: 101%;
+      display: block;
+      @media screen and (max-width: $tablet) {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .article-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 0.3s;
+      &:hover {
+        opacity: 1;
+      }
+      &:hover .article-content {
+        transform: translateY(0);
+      }
+
+      .article-content {
+        transition: 0.3s;
+        transform: translateY(100%);
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $quaternaryColor;
+        width: inherit;
+        height: inherit;
+        color: black;
+        padding: 0 2rem;
+
+        .article-links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            background-color: white;
+            border-radius: 4px;
+            margin: 20px;
+            padding: 2px 5px;
+            transition: 0.3s;
+            &:hover {
+              box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+
+        .article-tags {
+          font-weight: bolder;
+          text-align: center;
+          margin: 0.5rem 0;
+        }
+      }
+    }
+  }
+  .portfolio-intro {
+    flex-basis: 100%;
+    background-color: unset;
+    display: flex;
+    justify-content: center;
+    height: unset;
+    min-height: unset;
+    max-height: unset;
+    box-shadow: unset;
+    margin: 100px 0 2rem 0;
+    @media screen and (max-width: $tablet) {
+      max-width: unset;
+    }
+    p {
+      width: 45rem;
+      text-align: justify;
+      @media screen and (max-width: $desktop) {
+        width: 90%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

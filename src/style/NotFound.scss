@@ -1,0 +1,13 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  h1 {
+    margin: 1rem 2rem;
+    text-align: center;
+  }
+}

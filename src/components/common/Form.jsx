@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Input from "./Input";
+import TextArea from "./TextArea";
 
 class Form extends Component {
   state = {
@@ -87,10 +88,14 @@ class Form extends Component {
   };
 
   renderButton = (label) => {
-    return <button disabled={this.validate()}>{label}</button>;
+    return (
+      <div className="cta">
+        <button disabled={this.validate()}>{label}</button>
+      </div>
+    );
   };
 
-  renderInput = (key) => {
+  renderInput = (key, placeholder, extraClass) => {
     const { form, errors } = this.state;
     return (
       <Input
@@ -99,6 +104,23 @@ class Form extends Component {
         onChange={this.handleChange}
         value={form[key]}
         error={errors[key]}
+        placeholder={placeholder}
+        extraClass={extraClass}
+      />
+    );
+  };
+
+  renderTextArea = (key, placeholder, extraClass) => {
+    const { form, errors } = this.state;
+    return (
+      <TextArea
+        name={key}
+        label={key[0].toUpperCase() + key.slice(1)}
+        onChange={this.handleChange}
+        value={form[key]}
+        error={errors[key]}
+        placeholder={placeholder}
+        extraClass={extraClass}
       />
     );
   };

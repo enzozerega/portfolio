@@ -1,6 +1,13 @@
+@import "./Variables.scss";
+
 .hero {
   height: 100%;
   width: 50vw;
+  @media screen and (max-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
 
   .hero-title-container {
     display: flex;
@@ -10,26 +17,20 @@
     justify-content: center;
     align-items: center;
     padding: 0 2rem;
+    @media screen and (max-width: $desktop) {
+      order: 2;
+      transform: unset !important;
+      text-align: center;
+      margin-top: 5vh;
+      height: 20vh;
+    }
 
     .hero-title-content {
       h1 {
         font-size: 2rem;
       }
       h3 {
-        font-size: 1.5rem;
-      }
-    }
-    .cta {
-      padding: 1rem 0;
-      a {
-        border-radius: 4px;
-        background-color: #dc143c;
-        padding: 0.5rem;
-        transition: 0.3s;
-        color: #fdfbfc;
-        &:hover {
-          box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
-        }
+        font-size: 1rem;
       }
     }
   }
@@ -43,13 +44,70 @@
     max-width: 100vh;
     width: 50vw;
     min-width: 50vw;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    @media screen and (max-width: $desktop) {
+      position: unset;
+      top: unset;
+      right: unset;
+      order: 1;
+      width: 100vw;
+      min-width: unset;
+      max-width: unset;
+      height: 50vh;
+      min-height: 300px;
+      max-height: unset;
+    }
+    .placeholder {
+      position: relative;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      min-height: 100vh;
+      max-width: 100vh;
+      width: 50vw;
+      min-width: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      @media screen and (max-width: $desktop) {
+        width: 100vw;
+        min-width: unset;
+        max-width: unset;
+        min-height: 300px;
+        max-height: unset;
+      }
+      .img-small {
+        filter: blur(50px);
+        transform: scale(1);
+      }
+    }
 
-    img {
-      width: 100%;
+    .placeholder img {
+      position: absolute;
+      opacity: 0;
+      top: -10056px;
+      bottom: -9999px;
+      left: -9903px;
+      right: -9999px;
+      margin: auto;
+      width: calc(1400px - 18vw);
+      transition: opacity 0.5s linear;
+      @media screen and (max-width: $desktop) {
+        width: calc(1560px - 15vw);
+        top: -10208px;
+        left: -9879px;
+      }
+      @media screen and (max-width: $phone) {
+        left: -9859px;
+      }
+    }
+
+    .placeholder img.loaded {
+      opacity: 1;
     }
   }
 }
