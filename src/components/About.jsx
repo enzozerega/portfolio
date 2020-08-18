@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import { motion } from "framer-motion";
 import { animation } from "./common/Animations";
 import "../style/About.scss";
-import { Link } from "react-router-dom";
 import MyStory from "./MyStory";
 import Education from "./Education";
 import Skills from "./Skills";
@@ -27,11 +26,6 @@ const About = () => {
             where I can continue growing as a developer during a 6-months{" "}
             <strong>internship</strong>.
           </p>
-          {/* <p>
-            You will find my educational background, skills and a more in-depth
-            presentation on the sections bellow. Don’t doubt on contacting me if
-            you have any questions.
-          </p> */}
         </article>
         <article className="education">
           <h1>Education</h1>

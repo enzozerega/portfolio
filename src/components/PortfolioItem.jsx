@@ -20,17 +20,17 @@ const PortfolioItem = ({
           <div className="article-tags">{tags}</div>
           <div className="article-links">
             {github && (
-              <a href={github} target="_blank">
+              <a href={github} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             )}
             {www && !label && (
-              <a href={www} target="_blank">
+              <a href={www} target="_blank" rel="noopener noreferrer">
                 Live Site
               </a>
             )}
             {label && (
-              <a href={www} target="_blank">
+              <a href={www} target="_blank" rel="noopener noreferrer">
                 {label}
               </a>
             )}

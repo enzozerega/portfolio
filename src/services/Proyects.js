@@ -1,95 +1,78 @@
 const proyects = [
   {
-    name: "Magic Crystals",
-    skills: ["HTML", "CSS"],
-    thumbnail: "/assets/thumbnails/magic-crystals.PNG",
-    description:
-      "This is my first webpage ever! It's just a simple demo of a landing page for a fake online store.",
-    www: "http://enzo.zerega.chas.academy/u01-static-website/",
-    github: "https://github.com/enzozerega/magic-crystals",
+    title: "Car Rental",
+    description: "Register system for a car rental company",
+    tags: "PHP, MySQL, CSS, JavaScript",
+    github: "https://github.com/enzozerega/u05-php-car-rental",
+    www: "http://enzo.zerega.chas.academy/u05-car-rental/",
+    img: "carrental",
   },
   {
-    name: "Hangman",
-    skills: ["JavaScript", "CSS"],
-    thumbnail: "/assets/thumbnails/hangman.PNG",
-    description: "This is a hangman game. Guess the word or you lose!",
-    www: "http://enzo.zerega.chas.academy/u03-hangman/",
-    github: "https://github.com/enzozerega/hangman",
+    title: "Weather App",
+    description: "Check the weather",
+    tags: "React, CSS, The Movie Database API",
+    github: "https://github.com/enzozerega/u09-react-weather-app",
+    www: "https://u09-react-weather-app.web.app/",
+    img: "weatherapp",
   },
   {
-    name: "Trending News",
-    skills: ["Wordpress", "CSS"],
-    thumbnail: "/assets/thumbnails/trending-news.PNG",
-    description: "News feed created using Wordpress and the Newsliner theme",
+    title: "Movies App",
+    description: "Find movies and actors",
+    tags: "Angular, TypeScript, OpenWeatherMap API",
+    github: "https://github.com/enzozerega/u08-angular-movie-app",
+    www: "https://u08-angular-movie-app.web.app/",
+    img: "movieapp",
+  },
+  {
+    title: "Hangman",
+    description: "A simple game",
+    tags: "HTML, CSS, JavaScript",
+    github: "https://github.com/enzozerega/u03-javascript-hangman",
+    www: "http://enzo.zerega.chas.academy/u03-javascript-hangman/",
+    img: "hangman",
+  },
+  {
+    title: "Speak Out",
+    description: "T-shirts web store",
+    tags: "Wordpress, Elementor",
     www: "http://enzo.zerega.chas.academy/u07-wordpress/",
-    github: "https://github.com/enzozerega/u07-wordpress",
+    img: "tshirtsstore",
   },
   {
-    name: "Boutique API",
-    skills: ["Laravel", "PHP", "MySQL", "CSS"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
+    title: "MSc Thesis",
+    description: "Thesis I wrote to obtain my MSc in Geomatics",
+    tags: "GIS, Sentinel-2, R, Machine Learning Algorithms",
+    label: "Details",
+    www: "https://lup.lub.lu.se/student-papers/search/publication/8954922",
+    img: "geomatics",
   },
   {
-    name: "My Watching List",
-    skills: ["Angular", "TypeScript", "Bootstrap"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
+    title: "ArcticDEM data management",
+    description: "ArcGIS toolbox",
+    tags: "Python, ArcPy, ArcticDEM, GIS",
+    label: "Details",
+    www:
+      "https://www.nateko.lu.se/article/students-created-toolbox-for-gis-software",
+    img: "toolbox",
   },
   {
-    name: "Weather App",
-    skills: ["React"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
+    title: "My Portfolio",
+    description: "My web developer portfolio",
+    tags: "React, SCSS, Google Cloud",
+    github: "https://enzozerega.com",
+    www: "https://github.com/enzozerega/portfolio",
+    img: "portfolio",
   },
   {
-    name: "My Portfolio",
-    skills: ["React", "SCSS"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
-  },
-  {
-    name: "We Help",
-    skills: ["React", "Node", "OAuth"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
-  },
-  {
-    name: "MSc Thesis",
-    skills: ["R", "Remote Senting", "GIS"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
-  },
-  {
-    name: "Bachellors Thesis",
-    skills: ["Urban Planning", "GIS", "Ecology"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
-  },
-  {
-    name: "ArcGIS tool",
-    skills: ["Python", "GIS", "ArcPy"],
-    imgPath: "/assets/magic-crystals-cover.PNG",
-    description:
-      "This was my first webpage! It's just a simple demo of the landing page of a fake online store.",
-    livePath: "http://enzo.zerega.chas.academy/u01-static-website/",
+    title: "Magic Crystals",
+    description: "Online store. My first website ever!",
+    tags: "HTML, CSS",
+    github: "https://github.com/enzozerega/u01-static-website",
+    www: "http://enzo.zerega.chas.academy/u01-static-website/",
+    img: "magic-crystals",
   },
 ];
 
-export function getProyects() {
+export default function getProyects() {
   return proyects;
 }

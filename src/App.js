@@ -8,7 +8,6 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
-import Footer from "./components/Footer";
 import { IconContext } from "react-icons";
 import BDThesis from "./components/BDThesis";
 
@@ -31,7 +30,6 @@ const App = () => {
             </Switch>
           </AnimatePresence>
         </main>
-        <Footer />
       </IconContext.Provider>
     </Fragment>
   );

@@ -82,10 +82,18 @@ class Contact extends Form {
               <a href="mailto:hello@enzozerega.com">
                 <MdMail /> hello@enzozerega.com
               </a>
-              <a href="https://linkedin.com/in/enzo-zerega" target="_blank">
+              <a
+                href="https://linkedin.com/in/enzo-zerega"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedin /> linkedin.com/in/enzo-zerega
               </a>
-              <a href="https://github.com/enzozerega" target="_blank">
+              <a
+                href="https://github.com/enzozerega"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub /> github.com/enzozerega
               </a>
             </div>

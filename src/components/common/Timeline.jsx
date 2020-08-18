@@ -43,7 +43,7 @@ const TimelineItem = ({ data }) => (
         <p>
           {data.details}{" "}
           {data.link && (
-            <a href={data.link.url} target="_blank">
+            <a href={data.link.url} target="_blank" rel="noopener noreferrer">
               {data.link.text}
             </a>
           )}
@@ -51,11 +51,6 @@ const TimelineItem = ({ data }) => (
       </div>
     </div>
     <span className="circle" />
-    {/* <div className="timeline-item-content-overlay">
-      <div className="timeline-overlay-content">
-        <p>Hello</p>
-      </div>
-    </div> */}
   </div>
 );
 
