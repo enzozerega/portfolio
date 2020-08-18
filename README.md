@@ -1,6 +1,12 @@
 ## My personal web page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built using React 16.13.1 ![react](./assets/react.png)
+
+## Capture
+
+![portfolio-1000](./assets/portfolio-1000.gif)
+
+
 
 ## Live Site
 

@@ -1,0 +1,21 @@
+{
+  "short_name": "Enzo Zerega",
+  "name": "Enzo Zerega Web Developer",
+  "description": "Personal site of Enzo Zerega, a Full Stack Developer based in Stockolm, Sweden.",
+  "icons": [
+    {
+      "src": "./icon.ico",
+      "type": "image/ico",
+      "sizes": "50x50"
+    },
+    {
+      "src": "./icon_192.ico",
+      "type": "image/ico",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
