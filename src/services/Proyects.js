@@ -4,7 +4,7 @@ const proyects = [
     description: "Register system for a car rental company",
     tags: "PHP, MySQL, CSS, JavaScript",
     github: "https://github.com/enzozerega/u05-php-car-rental",
-    www: "http://enzo.zerega.chas.academy/u05-car-rental/",
+    www: "https://u05-php-car-rental.herokuapp.com/",
     img: "carrental",
   },
   {
@@ -28,16 +28,16 @@ const proyects = [
     description: "A simple game",
     tags: "HTML, CSS, JavaScript",
     github: "https://github.com/enzozerega/u03-javascript-hangman",
-    www: "http://enzo.zerega.chas.academy/u03-javascript-hangman/",
+    www: "https://u03-javascript-hangman.web.app",
     img: "hangman",
   },
-  {
-    title: "Speak Out",
-    description: "T-shirts web store",
-    tags: "Wordpress, Elementor",
-    www: "http://enzo.zerega.chas.academy/u07-wordpress/",
-    img: "tshirtsstore",
-  },
+  // {
+  //   title: "Speak Out",
+  //   description: "T-shirts web store",
+  //   tags: "Wordpress, Elementor",
+  //   www: "http://enzo.zerega.chas.academy/u07-wordpress/",
+  //   img: "tshirtsstore",
+  // },
   {
     title: "MSc Thesis",
     description: "Thesis I wrote to obtain my MSc in Geomatics",
@@ -68,7 +68,7 @@ const proyects = [
     description: "Online store. My first website ever!",
     tags: "HTML, CSS",
     github: "https://github.com/enzozerega/u01-static-website",
-    www: "http://enzo.zerega.chas.academy/u01-static-website/",
+    www: "https://u01-static-website.web.app",
     img: "magic-crystals",
   },
 ];

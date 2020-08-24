@@ -25,7 +25,7 @@ const timelineData = [
     text: "Agronomy Engineer",
     date: "2014",
     place: "Pontifical Catholic University of Chile",
-    details: `Mayor in environmental management. Thesis: "Assessment of the Metropolitan Regulation Plan in rural and biodiversity conservation areas".`,
+    details: `Major in environmental management. Thesis: "Assessment of the Metropolitan Regulation Plan in rural and biodiversity conservation areas".`,
     link: {
       url: "../../pdf/BD_Thesis_Enzo_Zerega",
       text: "Details",
