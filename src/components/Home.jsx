@@ -31,7 +31,7 @@ const Home = () => {
     >
       <motion.div variants={animation} className="hero-title-container">
         <div className="hero-title-content">
-          <h3>Enzo Zerega, MSc</h3>
+          <h3>Enzo Zerega</h3>
           <h1>Web Developer</h1>
           <div className="cta">
             <Link to="/contact">Contact me</Link>
