@@ -3,15 +3,14 @@
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   height: max-content;
-  margin: 0 15vw;
+  max-width: 1200px;
+  margin: 0 auto;
   margin-top: 50px;
-  @media screen and (max-width: $ultraWideScreen) {
-    margin: 0 10vw;
-  }
-  @media screen and (max-width: $desktop) {
-    margin: 0;
+  padding: 0 4.7rem;
+  @media screen and (max-width: 600px) {
+    padding: 0 1rem;
   }
 
   .articles-container {
@@ -20,9 +19,10 @@
     flex-wrap: wrap;
     justify-content: center;
     height: max-content;
-    margin: 2rem 2vw;
+    margin: 2rem 0;
     border-radius: 4px;
     padding-bottom: 2rem;
+    flex-grow: 1;
     @media screen and (max-width: $desktop) {
       width: 90%;
       margin: 2rem 0;
@@ -35,28 +35,27 @@
         transform: translateY(-45px);
       }
     }
+    article {
+      @media screen and (max-width: $laptop) {
+        max-width: 500px;
+        min-width: unset;
+        width: 100%;
+        min-height: unset;
+        height: max-content;
+      }
+    }
   }
 
   article {
     background-color: $backgroundColor;
-    width: 500px;
-    min-width: 500px;
-    height: 300px;
-    min-height: 300px;
-    max-height: 300px;
-    margin: 2rem 3vw;
+    width: 400px;
+    height: 240px;
+    margin: 1.5rem 1.5rem;
     border-radius: 4px;
     position: relative;
     display: inline-block;
     overflow: hidden;
     box-shadow: $shadow;
-    @media screen and (max-width: $tablet) {
-      max-width: 500px;
-      min-width: unset;
-      width: 100%;
-      min-height: unset;
-      height: max-content;
-    }
 
     img {
       width: auto;
@@ -136,12 +135,8 @@
       max-width: unset;
     }
     p {
-      width: 45rem;
       text-align: justify;
-      @media screen and (max-width: $desktop) {
-        width: 90%;
-        margin-bottom: 1rem;
-      }
+      margin-bottom: 1rem;
     }
   }
 }

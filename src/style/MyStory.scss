@@ -1,22 +1,11 @@
 @import "./Variables.scss";
 
 .my-story-section {
-  padding: 0 8rem;
-  @media screen and (max-width: $desktop) {
-    padding: unset;
-  }
+  padding: 0 2rem;
 
   p {
     margin: 1rem 0;
     text-align: justify;
-    width: 45rem;
-    @media screen and (max-width: $wideScreen) {
-      width: 40rem;
-    }
-    @media screen and (max-width: $desktop) {
-      margin: 1rem;
-      width: unset;
-    }
   }
 
   h2 {

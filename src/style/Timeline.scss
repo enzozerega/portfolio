@@ -5,14 +5,8 @@
   flex-direction: column;
   position: relative;
   margin: 0 0 2rem 0;
-  padding: 0 2.4rem;
-
-  @media screen and (max-width: $tablet) {
-    padding: 0 3.2rem;
-  }
-
-  @media screen and (max-width: $phone) {
-    padding: 0;
+  @media screen and (max-width: 1160px) {
+    align-items: center;
   }
 }
 
@@ -20,12 +14,21 @@
   background-color: $primaryColor;
   content: "";
   position: absolute;
-  left: 20%;
+  left: 2.7rem;
   width: 4px;
   height: 100%;
 
-  @media screen and (max-width: $phone) {
-    left: 12%;
+  @media screen and (max-width: 1160px) {
+    left: 50%;
+    margin-left: -8.4rem;
+    top: 50%;
+    margin-top: -13.5rem;
+  }
+  @media screen and (max-width: $tablet) {
+    left: 50%;
+    margin-left: -8.9rem;
+    top: 50%;
+    margin-top: -13.5rem;
   }
 }
 
@@ -37,6 +40,10 @@
   width: 80%;
   height: 5rem;
   max-height: 5rem;
+  @media screen and (max-width: 1160px) {
+    align-self: center;
+    width: unset;
+  }
 }
 
 .timeline-item-content {
@@ -48,20 +55,11 @@
   align-items: flex-start;
   position: relative;
   text-align: left;
-  width: 80%;
+  width: 14rem;
   padding: 0.5rem;
   height: inherit;
   transition: 0.2s;
   overflow: hidden;
-
-  @media screen and (max-width: $wideScreen) {
-    width: 14rem;
-  }
-
-  @media screen and (max-width: $desktop) {
-    width: 80%;
-  }
-
   @media screen and (max-width: 550px) {
     width: 14rem;
   }

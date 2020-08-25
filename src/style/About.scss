@@ -3,31 +3,23 @@
 .about {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   height: max-content;
-  margin: 0 15vw;
+  max-width: 1200px;
+  margin: 0 auto;
   margin-top: 50px;
-  @media screen and (max-width: $ultraWideScreen) {
-    margin: 0 10vw;
-  }
-  @media screen and (max-width: $wideScreen) {
-    margin: 0;
+  padding: 0 4.7rem;
+  @media screen and (max-width: 600px) {
+    padding: 0 1rem;
   }
 
   article {
     background-color: $secondaryColor;
-    width: 31vw;
-    margin: 2rem 2vw;
+    width: 21rem;
+    margin: 2rem 0;
     border-radius: 4px;
-    @media screen and (max-width: $ultraWideScreen) {
-      width: 34vw;
-    }
-    @media screen and (max-width: $wideScreen) {
-      width: 45vw;
-    }
-    @media screen and (max-width: $desktop) {
-      width: 90%;
-      margin: 2rem 0;
+    @media screen and (max-width: 1160px) {
+      flex-grow: 1;
     }
 
     h1 {
@@ -52,15 +44,15 @@
     p {
       margin-bottom: 1rem;
       text-align: justify;
-      width: 45rem;
-      @media screen and (max-width: $desktop) {
-        width: 90%;
-      }
     }
   }
 
   .education {
     height: max-content;
+    margin-right: 1rem;
+    @media screen and (max-width: 1160px) {
+      margin-right: unset;
+    }
   }
 
   .my-story {
@@ -69,15 +61,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    @media screen and (max-width: $ultraWideScreen) {
-      margin: 2rem 4vw;
-    }
-    @media screen and (max-width: $wideScreen) {
-      margin: 2rem 3vw;
-    }
-    @media screen and (max-width: $desktop) {
-      margin: 2rem 5vw;
-    }
+    margin: 2rem 0;
+    flex-grow: 1;
 
     h1 {
       text-align: left;
