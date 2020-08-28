@@ -41,13 +41,13 @@ const proyects = [
   {
     title: "MSc Thesis",
     description: "Thesis I wrote to obtain my MSc in Geomatics",
-    tags: "GIS, Sentinel-2, R, Machine Learning Algorithms",
+    tags: "GIS, R, Machine Learning",
     label: "Details",
     www: "https://lup.lub.lu.se/student-papers/search/publication/8954922",
     img: "geomatics",
   },
   {
-    title: "ArcticDEM data management",
+    title: "ArcticDEM data",
     description: "ArcGIS toolbox",
     tags: "Python, ArcPy, ArcticDEM, GIS",
     label: "Details",

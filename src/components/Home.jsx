@@ -14,11 +14,13 @@ const Home = () => {
     img.src = small.src;
     img.onload = function () {
       small.classList.add("loaded");
+      small.setAttribute("alt", "");
     };
     var imgLarge = new Image();
     imgLarge.src = placeholder.dataset.large;
     imgLarge.onload = function () {
       imgLarge.classList.add("loaded");
+      imgLarge.setAttribute("alt", "");
     };
     placeholder.appendChild(imgLarge);
   };
@@ -48,7 +50,7 @@ const Home = () => {
       >
         <div
           className="placeholder"
-          data-large={require("../img/portrait.png")}
+          data-large={require("../img/portrait-1000.png")}
         >
           <img
             src={require("../img/portrait-scaled.png")}
