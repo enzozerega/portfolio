@@ -1,7 +1,7 @@
 @import "./Variables.scss";
 
 header {
-  width: 50vw;
+  width: 100vw;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -27,6 +27,7 @@ header {
       border-radius: 0 0 4px 4px;
       background-size: 40%;
       transition: 0.3s;
+
       .nav-logo {
         width: 60px;
         min-width: 60px;
@@ -68,6 +69,8 @@ header {
         }
 
         a {
+          color: white;
+          border-bottom: 3px solid white !important;
           @media screen and (max-width: 400px) {
             margin-left: 1rem;
           }
