@@ -3,6 +3,7 @@
 .hero {
   height: 100%;
   width: 50vw;
+  justify-self: flex-end;
   max-width: unset;
   margin: unset;
   @media screen and (min-width: $ultraWideScreen) {
@@ -150,5 +151,19 @@
     .placeholder img.loaded {
       opacity: 1;
     }
+  }
+}
+
+.hero-skills {
+}
+.hero-skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 450px;
+  & > div {
+    margin: 1rem;
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
   }
 }

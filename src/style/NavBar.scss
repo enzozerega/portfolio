@@ -37,14 +37,6 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
-
-        .img {
-          width: inherit;
-          height: 60px;
-          background-image: url("../img/logo-transparent.png");
-          background-repeat: no-repeat;
-          background-position: center;
-        }
       }
       &:hover {
         box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
@@ -121,4 +113,6 @@ header {
 
 .nav-logo-img {
   z-index: 10;
+  width: 100%;
+  height: auto;
 }

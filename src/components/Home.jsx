@@ -5,6 +5,7 @@ import { animation } from "./common/Animations";
 import BackgroundVideo from "./BackgroundVideo";
 import anime from "animejs/lib/anime.es.js";
 import "../style/Home.scss";
+import { Fragment } from "react";
 
 const svgPath = document.querySelectorAll(".path");
 
@@ -41,7 +42,8 @@ const Home = () => {
   //   placeholder.appendChild(imgLarge);
   // };
   return (
-    <motion.section
+    <Fragment>
+         <motion.section
       initial="initial"
       animate="animate"
       exit="exit"
@@ -61,6 +63,7 @@ const Home = () => {
           <div className="title-shadow" />
         </div>
       </motion.div>
+
       {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -80,6 +83,34 @@ const Home = () => {
         </div>
       </motion.div> */}
     </motion.section>
+    <motion.section
+    initial="initial"
+    animate="animate"
+    exit="exit"
+    className="hero-skills"
+  >
+          <motion.div variants={animation} className="hero-skills-container">
+          <div className="hero-skills-content">
+            <div>
+              React
+            </div>
+            <div>
+              JavaScript
+            </div>
+            <div>
+              Node.js
+            </div>
+            <div>
+              Git
+            </div>
+            <div>
+              ArcGIS
+            </div>
+          </div>
+        </motion.div>
+        </motion.section> 
+    </Fragment>
+
   );
 };
 

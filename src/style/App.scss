@@ -5,6 +5,16 @@
   font-family: noto;
 }
 
+@font-face {
+  src: url("./fonts/Nunito-Regular.ttf");
+  font-family: Nunito;
+}
+
+@font-face {
+  src: url("./fonts/Lora-Regular.ttf");
+  font-family: Lora;
+}
+
 *,
 *::before,
 *::after {
@@ -14,7 +24,7 @@
 }
 
 html {
-  font-family: noto, serif;
+  font-family: Lora, serif;
   font-size: 22px;
   background-color: #fdfbfc;
   box-sizing: border-box;
@@ -42,7 +52,8 @@ ul {
 }
 
 main {
-  flex-grow: 1;
+  display: flex;
+  width: 100vw;
 }
 
 #root {
