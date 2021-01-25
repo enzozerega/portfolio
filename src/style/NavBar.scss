@@ -41,7 +41,7 @@ header {
         .img {
           width: inherit;
           height: 60px;
-          background-image: url("../img/logo.svg");
+          background-image: url("../img/logo-transparent.png");
           background-repeat: no-repeat;
           background-position: center;
         }
@@ -70,20 +70,19 @@ header {
 
         a {
           color: white;
-          border-bottom: 3px solid white !important;
           @media screen and (max-width: 400px) {
             margin-left: 1rem;
           }
         }
         .active {
-          border-bottom: 3px solid #f41f4e !important;
+          border-bottom: 3px solid $primaryColor !important;
         }
 
         .navbar-item {
           transition: 0.3s;
           border-bottom: 3px solid #dc143c00;
           &:hover {
-            border-bottom: 3px solid #f41f4e;
+            border-bottom: 3px solid $primaryColor;
           }
         }
       }
@@ -107,4 +106,19 @@ header {
       }
     }
   }
+}
+
+.nav-logo-container {
+  width: 60px;
+  min-width: 60px;
+  height: inherit;
+  background-color: $primaryColor;
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-logo-img {
+  z-index: 10;
 }

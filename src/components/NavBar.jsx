@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import "../style/NavBar.scss";
 
 class NavBar extends Component {
-  state = {};
   transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] };
   render() {
     return (
@@ -14,9 +13,12 @@ class NavBar extends Component {
             <motion.div
               whileHover={{ fontStretch: 2, opacity: 0 }}
               transition={this.transition}
-              className="nav-logo"
+              className="nav-logo-container"
             >
-              <div className="img" />
+              <img
+                src={require("../img/logo-transparent.png")}
+                className="nav-logo-img"
+              />
             </motion.div>
           </a>
           <ul>

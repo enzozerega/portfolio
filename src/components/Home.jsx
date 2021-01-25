@@ -3,7 +3,22 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { animation } from "./common/Animations";
 import BackgroundVideo from "./BackgroundVideo";
+import anime from "animejs/lib/anime.es.js";
 import "../style/Home.scss";
+
+const svgPath = document.querySelectorAll(".path");
+
+const svgText = anime({
+  targets: svgPath,
+  loop: true,
+  direction: "alternate",
+  strokeDashoffset: [anime.setDashoffset, 0],
+  easing: "easeInOutSine",
+  duration: 700,
+  delay: (el, i) => {
+    return i * 500;
+  },
+});
 
 const Home = () => {
   // Progressive image loading.
@@ -46,7 +61,6 @@ const Home = () => {
           <div className="title-shadow" />
         </div>
       </motion.div>
-
       {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
