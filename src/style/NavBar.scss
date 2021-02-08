@@ -29,6 +29,7 @@ header {
       padding: 0 !important;
       ul {
         flex-basis: 100%;
+        margin-top: 70px;
         padding: 0.5rem 1rem;
       }
     }
@@ -46,6 +47,7 @@ header {
     .nav-home-link {
       height: inherit;
       width: inherit;
+      position: fixed;
       background-color: $primaryColor;
       background-image: url("../img/icon-home.svg");
       background-repeat: no-repeat;
@@ -53,7 +55,7 @@ header {
       border-radius: 0 0 4px 4px;
       background-size: 40%;
       transition: 0.3s;
-
+      z-index: 10;
       .nav-logo {
         width: 60px;
         min-width: 60px;

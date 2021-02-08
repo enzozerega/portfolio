@@ -2,49 +2,21 @@
 
 .hero {
   height: 100%;
-  width: 50vw;
+  width: 100%;
   max-width: unset;
   margin: unset;
-  @media screen and (min-width: $ultraWideScreen) {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  @media screen and (max-width: $desktop) {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-  }
-
+  display: flex;
+  align-items: center;
   .hero-title-container {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: inherit;
-    justify-content: center;
-    align-items: center;
+    height: max-content;
+    width: 100%;
     padding: 0 2rem;
-    @media screen and (min-width: $ultraWideScreen) {
-      align-items: unset;
+    margin-top: 50px;
+    align-items: center;
+    @media screen and (max-width: $wideScreen) {
+      flex-direction: column;
     }
-    @media screen and (max-width: $desktop) {
-      order: 2;
-      transform: unset !important;
-      text-align: center;
-      padding-bottom: 50px;
-    }
-
-    .title-shadow {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      opacity: 0.3;
-      border-radius: 4px;
-      z-index: -1;
-    }
-
     .title-text {
       display: flex;
       flex-direction: column;
@@ -52,8 +24,8 @@
     }
 
     .hero-title-content {
-      position: relative;
       color: white;
+      width: max-content;
       h1 {
         padding: 0 3rem;
         font-size: 2rem;
@@ -71,90 +43,7 @@
       .flend {
         padding-top: 3rem;
         align-self: center;
-        @media screen and (max-width: $phone-sm) {
-          padding-top: 2rem;
-        }
       }
-    }
-  }
-
-  .hero-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    min-height: 500px;
-    max-width: 100vh;
-    width: 50vw;
-    min-width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
-    @media screen and (max-height: 314px) {
-      display: none;
-    }
-    @media screen and (max-width: $desktop) {
-      position: unset;
-      top: unset;
-      right: unset;
-      order: 1;
-      width: 100vw;
-      min-width: unset;
-      max-width: unset;
-      height: 50vh;
-      max-height: unset;
-    }
-    .placeholder {
-      position: relative;
-      top: 0;
-      right: 0;
-      height: 100vh;
-      min-height: 500px;
-      max-width: 100vh;
-      width: 50vw;
-      min-width: 50vw;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-      @media screen and (max-width: $desktop) {
-        width: 100vw;
-        min-width: unset;
-        max-width: unset;
-        min-height: 300px;
-        max-height: unset;
-      }
-      .img-small {
-        filter: blur(50px);
-        transform: scale(1);
-      }
-    }
-
-    .placeholder img {
-      position: absolute;
-      opacity: 0;
-      top: -10056px;
-      bottom: -9999px;
-      left: -9903px;
-      right: -9999px;
-      margin: auto;
-      width: 57vw;
-      transition: opacity 0.5s linear;
-      @media screen and (min-width: $ultraWideScreen) {
-        width: 800px;
-      }
-      @media screen and (max-width: $desktop) {
-        width: 120vw;
-        top: -10208px;
-      }
-      @media screen and (max-width: $phone) {
-        left: -9944px;
-      }
-    }
-
-    .placeholder img.loaded {
-      opacity: 1;
     }
   }
 }

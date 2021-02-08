@@ -21,8 +21,8 @@ const MyStory = () => {
         Here I have lived in Malmö and Lund, but now I'm based in Stockholm. It
         has taken me quite some time to figure out what I want to do with my
         life. How can I contribute to the world? –it's a question that is often
-        on my mind these days. I'm about to finish my sudies in
-        <strong> Web Development</strong>, and I'm looking for a place where I
+        on my mind these days. I'm about to finish my sudies in{" "}
+        <strong> Web Development </strong>, and I'm looking for a place where I
         can start applying all the things I've learned until now.
       </p>
       <h2>How I got into web developtment</h2>
@@ -35,12 +35,11 @@ const MyStory = () => {
         Learning the sciences behind how we make use of nature to produce our
         food seemed like a reasonable choice at that time. But the more I
         learned how damaging for our planet agriculture had become, the more I
-        got interested on the
-        <strong> environmental sciences</strong>. This is why, instead of
-        focusing my studies on crop production, I focused them on environmental
-        management. By doing this, I ended up taking courses on climate change,
-        ecology, conservation biology, sustainable development and, my favorite,
-        geomatics.
+        got interested on the <strong> environmental sciences </strong>. This is
+        why, instead of focusing my studies on crop production, I focused them
+        on environmental management. By doing this, I ended up taking courses on
+        climate change, ecology, conservation biology, sustainable development
+        and, my favorite, geomatics.
       </p>
       <p>
         Wait, geo... what? I know not many people know what geomatics is, so
@@ -85,12 +84,12 @@ const MyStory = () => {
         many of today's global issues.
       </p>
       <p>
-        When I obtained my<strong> MSc in geomatics</strong>, I had much more
+        When I obtained my <strong> MSc in geomatics </strong>, I had much more
         clarity about what really is that I want to do with my life. And here is
         a clue: it involves the World Wide Web and science. It took me some
         months to decide what my next step was going to be, but I ended up
-        choosing to start a journey to become a web developer.
-        <strong> Full Stack Development</strong> was the program that better
+        choosing to start a journey to become a web developer.{" "}
+        <strong> Full Stack Development </strong> was the program that better
         suited my aspirations. So on 2019, I started a 2-year vocational
         education and training program (VET) on the subject at Chas Academy.
         There I was trained on the use of HTML, CSS, JavaScript (Vanilla,

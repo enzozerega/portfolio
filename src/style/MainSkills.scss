@@ -1,35 +1,67 @@
 @import "./Variables.scss";
 
-.skills-container {
+.main-skills-container {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  .hidden {
-    object-fit: contain;
-    padding: 0.2rem 0;
-    margin: 0 0.2rem;
-    filter: grayscale(100%);
-    width: 1.8rem;
-    height: 1.8rem;
-    opacity: 0;
+  div {
+    .hidden-skill {
+      object-fit: contain;
+      padding: 0.2rem 0;
+      margin: 1rem 3rem;
+      filter: grayscale(100%);
+      width: 5rem;
+      height: 5rem;
+      border-radius: 4px;
+      opacity: 0;
+      @media screen and (max-width: $wideScreen) {
+        width: 3rem;
+        height: 3rem;
+      }
+      @media screen and (max-width: $laptop) {
+        width: 1rem;
+        height: 1rem;
+      }
+      @media screen and (max-width: $phone-sm) {
+        margin: 0;
+      }
+    }
   }
-  .animated {
-    object-fit: contain;
-    padding: 0.2rem 0;
-    margin: 0 0.2rem;
-    filter: grayscale(100%);
-    width: 1.8rem;
-    height: 1.8rem;
-    animation: slidein 5s infinite;
-    @keyframes slidein {
-      0% {
-        opacity: 0;
+  div {
+    .animated-skill {
+      object-fit: contain;
+      padding: 0.2rem 0;
+      margin: 1rem 3rem;
+      filter: grayscale(100%);
+      width: 5rem;
+      height: 5rem;
+      animation: slidein 5s infinite;
+      border-radius: 4px;
+      @media screen and (max-width: $wideScreen) {
+        width: 3rem;
+        height: 3rem;
       }
-      50% {
-        opacity: 0.5;
+      @media screen and (max-width: $laptop) {
+        width: 1rem;
+        height: 1rem;
       }
-      100% {
-        opacity: 0;
+      @media screen and (max-width: $phone-sm) {
+        margin: 0;
+      }
+      @keyframes slidein {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.2;
+        }
+        100% {
+          opacity: 0;
+        }
       }
     }
   }
