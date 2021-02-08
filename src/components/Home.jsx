@@ -3,43 +3,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { animation } from "./common/Animations";
 import BackgroundVideo from "./BackgroundVideo";
-import anime from "animejs/lib/anime.es.js";
 import "../style/Home.scss";
-
-const svgPath = document.querySelectorAll(".path");
-
-const svgText = anime({
-  targets: svgPath,
-  loop: true,
-  direction: "alternate",
-  strokeDashoffset: [anime.setDashoffset, 0],
-  easing: "easeInOutSine",
-  duration: 700,
-  delay: (el, i) => {
-    return i * 500;
-  },
-});
+import MainSkills from "./MainSkills";
 
 const Home = () => {
-  // Progressive image loading.
-  // From: https://jmperezperez.com/medium-image-progressive-loading-placeholder/
-  // window.onload = function () {
-  //   var placeholder = document.querySelector(".placeholder"),
-  //     small = placeholder.querySelector(".img-small");
-  //   var img = new Image();
-  //   img.src = small.src;
-  //   img.onload = function () {
-  //     small.classList.add("loaded");
-  //     small.setAttribute("alt", "");
-  //   };
-  //   var imgLarge = new Image();
-  //   imgLarge.src = placeholder.dataset.large;
-  //   imgLarge.onload = function () {
-  //     imgLarge.classList.add("loaded");
-  //     imgLarge.setAttribute("alt", "");
-  //   };
-  //   placeholder.appendChild(imgLarge);
-  // };
   return (
     <motion.section
       initial="initial"
@@ -53,7 +20,7 @@ const Home = () => {
           <div className="title-text">
             <h3>Enzo Zerega</h3>
             <h1>Web Developer</h1>
-            <h1>& GIS analyst</h1>
+            <h1>& GIS Analyst</h1>
             <div className="cta flend">
               <Link to="/contact">Contact me</Link>
             </div>
@@ -61,24 +28,9 @@ const Home = () => {
           <div className="title-shadow" />
         </div>
       </motion.div>
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ transition: 0.2 }}
-        className="hero-image"
-      >
-        <div
-          className="placeholder"
-          data-large={require("../img/portrait-1000.png")}
-        >
-          <img
-            src={require("../img/portrait-scaled.png")}
-            className="img-small"
-            alt=""
-          />
-        </div>
-      </motion.div> */}
+      <motion.div variants={animation} className="hero-title-container">
+        <MainSkills />
+      </motion.div>
     </motion.section>
   );
 };

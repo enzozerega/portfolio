@@ -5,8 +5,12 @@ import "../style/About.scss";
 import MyStory from "./MyStory";
 import Education from "./Education";
 import Skills from "./Skills";
+import ImagePL from "./common/ImagePL";
 
 const About = () => {
+  //Progressive image loading.
+  //From: https://jmperezperez.com/medium-image-progressive-loading-placeholder/
+
   return (
     <Fragment>
       <motion.section
@@ -17,18 +21,22 @@ const About = () => {
         className="about"
       >
         <article className="about-intro">
-          <p>
-            Hi! My name is Enzo, I’m currently based on{" "}
-            <strong>Stockholm</strong> and on 2019 I decided to start a career
-            on web development. That same year I started a training to become a{" "}
-            <strong>Full Stack developer</strong> at Chas Academy. Currently,
-            and after more than one year of training, I’m looking for a company
-            where I can continue growing as a developer during a 6-months{" "}
-            <strong>internship</strong>.
-          </p>
+          <ImagePL />
+          <div className="about-intro-text">
+            <p>
+              <span className="greeting">Hi!</span> I'm Enzo.
+            </p>
+            <p>
+              I’m currently based in <strong>Stockholm</strong>, and on 2019 I
+              decided to start a career on web development. Right now, I'm about
+              to finish a training to become a{" "}
+              <strong>Full stack developer</strong> at Chas Academy. I’m looking
+              for a company where I can continue growing as a developer.
+            </p>
+          </div>
         </article>
         <article className="education">
-          <h1>Education</h1>
+          <h1>Highlights</h1>
           <Education />
         </article>
         <article className="skills">

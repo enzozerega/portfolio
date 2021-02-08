@@ -37,21 +37,42 @@
     flex-basis: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 100px 0 2rem 0;
+    margin: 100px 0 100px 0;
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+      .about-intro-text {
+        width: 100% !important;
+        margin-top: 40px;
+      }
+    }
 
-    p {
-      margin-bottom: 1rem;
-      text-align: justify;
+    .about-intro-text {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      p {
+        margin-bottom: 1rem;
+        text-align: justify;
+        .greeting {
+          font-size: 3rem;
+        }
+      }
     }
   }
 
   .education {
     height: max-content;
     margin-right: 1rem;
-    @media screen and (max-width: 1160px) {
+    @media screen and (max-width: $desktop) {
       margin-right: unset;
+      flex-basis: 100%;
+    }
+  }
+
+  .skills {
+    @media screen and (max-width: $desktop) {
+      flex-basis: 100%;
     }
   }
 
@@ -71,7 +92,7 @@
 
     .cta {
       text-align: center;
-      transform: translateY(-2rem);
+      margin: 1rem 0 2rem 0;
     }
   }
 }

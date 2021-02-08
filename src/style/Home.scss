@@ -30,8 +30,7 @@
       order: 2;
       transform: unset !important;
       text-align: center;
-      margin-top: 5vh;
-      height: 20vh;
+      padding-bottom: 50px;
     }
 
     .title-shadow {
@@ -59,15 +58,22 @@
         padding: 0 3rem;
         font-size: 2rem;
         align-self: center;
+        @media screen and (max-width: $phone-sm) {
+          font-size: 1rem;
+          font-weight: lighter;
+        }
       }
       h3 {
-        padding: 0 3rem 1rem 1.5rem;
+        padding: 0 3rem 1rem 3rem;
         font-size: 1rem;
         color: $primaryColor;
       }
       .flend {
         padding-top: 3rem;
         align-self: center;
+        @media screen and (max-width: $phone-sm) {
+          padding-top: 2rem;
+        }
       }
     }
   }

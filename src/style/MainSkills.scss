@@ -1,0 +1,36 @@
+@import "./Variables.scss";
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .hidden {
+    object-fit: contain;
+    padding: 0.2rem 0;
+    margin: 0 0.2rem;
+    filter: grayscale(100%);
+    width: 1.8rem;
+    height: 1.8rem;
+    opacity: 0;
+  }
+  .animated {
+    object-fit: contain;
+    padding: 0.2rem 0;
+    margin: 0 0.2rem;
+    filter: grayscale(100%);
+    width: 1.8rem;
+    height: 1.8rem;
+    animation: slidein 5s infinite;
+    @keyframes slidein {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
