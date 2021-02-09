@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { animation } from "./common/Animations";
 import BackgroundVideo from "./BackgroundVideo";
 import "../style/Home.scss";
-import MainSkills from "./MainSkills";
 
 const Home = () => {
   return (
@@ -26,7 +25,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <MainSkills />
         </motion.div>
       </motion.section>
       <BackgroundVideo />

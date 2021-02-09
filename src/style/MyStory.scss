@@ -15,4 +15,11 @@
       margin: 0 1rem;
     }
   }
+
+  strong {
+    background-color: $tertiaryColor;
+    padding: 0 0.2rem;
+    margin-left: 0.2rem;
+    border-radius: 4px;
+  }
 }

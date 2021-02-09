@@ -59,8 +59,8 @@ const proyects = [
     title: "My Portfolio",
     description: "My web developer portfolio",
     tags: "React, SCSS, Google Cloud",
-    github: "https://enzozerega.com",
-    www: "https://github.com/enzozerega/portfolio",
+    github: "https://github.com/enzozerega/portfolio",
+    www: "https://enzozerega.com",
     img: "portfolio",
   },
   {
