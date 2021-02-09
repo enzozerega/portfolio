@@ -45,6 +45,7 @@ header {
     height: inherit;
 
     .nav-home-link {
+      display: flex;
       height: inherit;
       width: inherit;
       position: fixed;
@@ -56,10 +57,10 @@ header {
       background-size: 40%;
       transition: 0.3s;
       z-index: 10;
-      .nav-logo {
+      .nav-logo-container {
         width: 60px;
         min-width: 60px;
-        height: inherit;
+        height: auto;
         background-color: $primaryColor;
         border-radius: 0 0 4px 4px;
         display: flex;
@@ -67,8 +68,8 @@ header {
         justify-content: center;
 
         .img {
-          width: inherit;
-          height: 60px;
+          width: 60px;
+          height: auto;
           background-image: url("../img/logo-transparent.png");
           background-repeat: no-repeat;
           background-position: center;
@@ -118,7 +119,7 @@ header {
     nav {
       .nav-home-link {
         width: 60px;
-        .nav-logo {
+        .nav-logo-container {
           min-width: unset;
           width: 60px;
           .img {
