@@ -1,0 +1,17 @@
+@import "./Variables.scss";
+
+.img-container {
+  background-color: $secondaryColor;
+  border-radius: 4px;
+  width: 40%;
+  max-width: 340px;
+  min-width: 250px;
+  margin-right: 10%;
+  height: min-content;
+  img {
+    width: 100%;
+    height: auto;
+    transform: translate(30px, 30px);
+    border-radius: 4px;
+  }
+}

@@ -2,12 +2,23 @@ import React from "react";
 
 const timelineData = [
   {
-    text: "Web Development student",
-    date: "2019",
-    details: "Full Stack Development program. Currently on my second year.",
+    text: "Web Developer",
+    date: "2021",
+    details: "Full Stack Development program. About to finish",
     place: "Chas Academy",
     link: {
       url: "https://kunskapsbasen.chas.school/",
+      text: "Details",
+    },
+  },
+  {
+    text: "Full stack developer internship",
+    date: "2020",
+    details:
+      "6-months internship. I built a serverless web app using AWS services, React and a GraphQL API.",
+    place: "Gleechi",
+    link: {
+      url: "https://gleechi.com/",
       text: "Details",
     },
   },
@@ -22,7 +33,7 @@ const timelineData = [
     },
   },
   {
-    text: "Agronomy Engineer",
+    text: "Agronomist Engineer",
     date: "2014",
     place: "Pontifical Catholic University of Chile",
     details: `Major in environmental management. Thesis: "Assessment of the Metropolitan Regulation Plan in rural and biodiversity conservation areas".`,

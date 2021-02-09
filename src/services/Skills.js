@@ -20,6 +20,11 @@ const skills = [
     tag: "languages",
   },
   {
+    name: "AWS",
+    img: "aws.png",
+    tag: "tools",
+  },
+  {
     name: "Docker",
     img: "docker.png",
     tag: "tools",
@@ -38,6 +43,11 @@ const skills = [
     name: "CSS3",
     img: "css3.png",
     tag: "languages",
+  },
+  {
+    name: "DynamoDB",
+    img: "dynamodb.png",
+    tag: "databases",
   },
   {
     name: "MySQL",
@@ -63,6 +73,11 @@ const skills = [
     name: "Express",
     img: "express.png",
     tag: "frameworks",
+  },
+  {
+    name: "GraphQL",
+    img: "graphql.png",
+    tag: "tools",
   },
   {
     name: "Node.js",
