@@ -8,7 +8,7 @@ const BackgroundVideo = () => {
       <div className="shadow" />
       <video autoPlay loop muted className="background-video">
         <source
-          src={require("../videos/background-video2.mp4")}
+          src="https://enzozerega-portfolio-files.s3.eu-north-1.amazonaws.com/background-video.mp4"
           type="video/mp4"
         />
       </video>
