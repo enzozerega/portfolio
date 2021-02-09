@@ -1,12 +1,7 @@
 import React from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
 import "../style/MyStory.scss";
 
-const transition = { duration: 0.2, ease: [0.43, 0.13, 0.23, 0.96] };
-
 const MyStory = () => {
-  const { scrollYProgress } = useViewportScroll();
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 0]);
   return (
     <div className="my-story-container">
       <p>

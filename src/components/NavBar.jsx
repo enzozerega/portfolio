@@ -27,6 +27,7 @@ export default function NavBar() {
             <img
               src={require("../img/logo-transparent.png")}
               className="nav-logo-img"
+              alt=""
             />
           </motion.div>
         </NavLink>

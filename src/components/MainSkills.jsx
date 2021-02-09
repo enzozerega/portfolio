@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import "../style/MainSkills.scss";
-import getMainSkills from "../services/MainSkills";
-
-const skillsData = getMainSkills();
 
 const SkillsItem = ({ data, animatedClass }) =>
   data ? (
     <img className={animatedClass} src={require(`../img/${data}`)} alt="" />
   ) : (
-    <img className="hidden-skill" />
+    <img className="hidden-skill" alt="" />
   );
 
 export default function MainSkills() {
