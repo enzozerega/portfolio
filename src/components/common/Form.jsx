@@ -41,19 +41,13 @@ class Form extends Component {
       switch (id) {
         case "name":
           if (!this.validName(obj[id]))
-            errors[id] = `The ${
-              id[0].toUpperCase() + id.slice(1)
-            } field contains invalid characters`;
+            errors[id] = `Invalid characters are not allowed`;
           else if (obj[id].length >= 50)
-            errors[id] = `The ${
-              id[0].toUpperCase() + id.slice(1)
-            } field cannot be larger than 50 characters`;
+            errors[id] = `The field cannot be larger than 50 characters`;
           break;
         case "email":
           if (!this.validEmail(obj[id]))
-            errors[id] = `The ${
-              id[0].toUpperCase() + id.slice(1)
-            } field must contain a valid email adress`;
+            errors[id] = `Provide a valid email address`;
           break;
         case "message":
           if (obj[id].length >= 5000)

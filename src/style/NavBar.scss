@@ -3,46 +3,15 @@
 header {
   width: 100vw;
   height: 100px;
-  min-height: 100px;
-  @media screen and (max-width: $phone) {
-    min-height: 60px;
-  }
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 50px;
   @media screen and (max-width: $phone) {
     height: 60px;
-    nav {
-      padding: 0 1rem !important;
-      ul {
-        padding-left: 1rem;
-        margin-left: 50px;
-        li {
-          margin: 0 0.5rem !important;
-        }
-      }
-    }
   }
-  @media screen and (max-width: $phone) {
-    nav {
-      flex-direction: column;
-      padding: 0 !important;
-      ul {
-        flex-basis: 100%;
-        margin-top: 70px;
-        padding: 0.5rem 1rem;
-        margin-left: 0;
-      }
-    }
-  }
-  @media screen and (max-width: 300px) {
-    nav {
-      ul {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+  @media screen and (max-height: $phone) {
+    height: 60px;
   }
   @media screen and (max-width: $desktop) {
     width: 100vw;
@@ -53,50 +22,33 @@ header {
     display: flex;
     align-items: center;
     height: inherit;
-
-    .nav-home-link {
-      display: flex;
-      height: inherit;
-      width: inherit;
-      position: fixed;
-      background-color: $primaryColor;
-      background-image: url("../img/icon-home.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      border-radius: 0 0 4px 4px;
-      background-size: 40%;
-      transition: 0.3s;
-      z-index: 10;
-      .nav-logo-container {
-        width: 60px;
-        min-width: 60px;
-        height: auto;
-        background-color: $primaryColor;
-        border-radius: 0 0 4px 4px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-        .img {
-          width: 60px;
-          height: auto;
-          background-image: url("../img/logo-transparent.png");
-          background-repeat: no-repeat;
-          background-position: center;
-        }
-      }
-      &:hover {
-        box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
-      }
+    @media screen and (max-width: $phone) {
+      padding: 0 1rem !important;
+      flex-direction: column;
+      padding: 0 !important;
     }
-
     ul {
       justify-content: center;
       flex-grow: 1;
       display: flex;
       flex-wrap: wrap;
+      margin-left: 50px;
+      @media screen and (max-width: $phone) {
+        flex-basis: 100%;
+        margin-top: 70px;
+        padding: 0.5rem 1rem;
+        margin-left: 0;
+      }
+      @media screen and (max-width: 300px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       li {
         margin: 0 1rem;
+        @media screen and (max-width: $phone) {
+          margin: 0 0.5rem !important;
+        }
         a {
           color: white;
         }
@@ -121,37 +73,44 @@ header {
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  header {
-    nav {
-      .nav-home-link {
-        width: 60px;
-        .nav-logo-container {
-          min-width: unset;
+    .nav-home-link {
+      display: flex;
+      height: 100px;
+      width: 60px;
+      position: fixed;
+      background-color: $primaryColor;
+      background-image: url("../img/icon-home.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 0 0 4px 4px;
+      background-size: 40%;
+      transition: 0.3s;
+      z-index: 10;
+      @media screen and (max-width: $phone) {
+        height: 60px;
+      }
+      @media screen and (max-height: $phone) {
+        height: 60px;
+      }
+      .nav-logo-container {
+        width: inherit;
+        height: inherit;
+        background-color: $primaryColor;
+        border-radius: 0 0 4px 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .nav-logo-img {
           width: 60px;
-          .img {
-            width: 60px;
-          }
+          height: auto;
+          background-image: url("../img/logo-transparent.png");
+          background-repeat: no-repeat;
+          z-index: 10;
+        }
+        &:hover {
+          box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.2);
         }
       }
     }
   }
-}
-
-.nav-logo-container {
-  width: 60px;
-  min-width: 60px;
-  height: inherit;
-  background-color: $primaryColor;
-  border-radius: 0 0 4px 4px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.nav-logo-img {
-  z-index: 10;
 }
