@@ -13,10 +13,10 @@ const MyStory = () => {
       <h2>Who I am</h2>
       <p>
         I'm a 32-year-old man originally from Chile who on 2014 moved to Sweden.
-        Here I have lived in Malmö and Lund, but now I'm based in Stockholm. It
-        has taken me quite some time to figure out what I want to do with my
-        life. How can I contribute to the world? –it's a question that is often
-        on my mind these days. I'm about to finish my sudies in
+        Here I have lived in Malmö, Lund ans Stockholm, but now I'm based in
+        Jönköping. It has taken me quite some time to figure out what I want to
+        do with my life. How can I contribute to the world? –it's a question
+        that is often on my mind these days. I'm about to finish my sudies in
         <strong>Web Development</strong>, and I'm looking for a place where I
         can start applying all the things I've learned until now.
       </p>

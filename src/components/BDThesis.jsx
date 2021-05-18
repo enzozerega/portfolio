@@ -4,7 +4,7 @@ const BDThesis = () => {
   return (
     <div className="thesis">
       <iframe
-        src={require("../pdf/BD_Thesis_Enzo_Zerega.pdf")}
+        src="https://github.com/enzozerega/portfolio/blob/master/src/pdf/BD_Thesis_Enzo_Zerega.pdf"
         width="100%"
         height="100%"
         title="BD thesis"

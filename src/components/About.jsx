@@ -27,9 +27,9 @@ const About = () => {
               <span className="greeting">Hi!</span> I'm Enzo.
             </p>
             <p>
-              I’m currently based in <strong>Stockholm</strong>, and in 2019 I
-              decided to start a career on web development. Right now, I'm about
-              to finish a training to become a{" "}
+              I’m currently based in <strong>Jönköping</strong>, and in 2019 I
+              decided to start a career on web development. Right now, I
+              finished a training to become a{" "}
               <strong>Full stack developer</strong> at Chas Academy. I’m looking
               for a company where I can continue growing as a developer.
             </p>
