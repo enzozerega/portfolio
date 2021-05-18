@@ -34,7 +34,11 @@ const Portfolio = () => {
                 tags={data.tags}
                 github={data.github}
                 www={data.www}
-                img={require(`../img/${data.img}.png`)}
+                img={
+                  data.img !== "mediaspace"
+                    ? require(`../img/${data.img}.png`)
+                    : require(`../img/${data.img}.gif`)
+                }
                 key={index}
               />
             )
@@ -48,7 +52,11 @@ const Portfolio = () => {
                 tags={data.tags}
                 label={data.label}
                 www={data.www}
-                img={require(`../img/${data.img}.png`)}
+                img={
+                  data.img !== "mediaspace"
+                    ? require(`../img/${data.img}.png`)
+                    : require(`../img/${data.img}.gif`)
+                }
                 key={index}
               />
             )
@@ -62,7 +70,11 @@ const Portfolio = () => {
                 description={data.description}
                 tags={data.tags}
                 www={data.www}
-                img={require(`../img/${data.img}.png`)}
+                img={
+                  data.img !== "mediaspace"
+                    ? require(`../img/${data.img}.png`)
+                    : require(`../img/${data.img}.gif`)
+                }
                 key={index}
               />
             )

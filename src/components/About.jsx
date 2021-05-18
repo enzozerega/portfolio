@@ -27,7 +27,7 @@ const About = () => {
               <span className="greeting">Hi!</span> I'm Enzo.
             </p>
             <p>
-              I’m currently based in <strong>Jönköping</strong>, and in 2019 I
+              I’m currently based in <strong>Sweden</strong>, and in 2019 I
               decided to start a career on web development. Right now, I
               finished a training to become a{" "}
               <strong>Full stack developer</strong> at Chas Academy. I’m looking

@@ -8,20 +8,20 @@ const proyects = [
     img: "carrental",
   },
   {
-    title: "Weather App",
-    description: "Check the weather",
-    tags: "React, CSS, The Movie Database API",
-    github: "https://github.com/enzozerega/u09-react-weather-app",
-    www: "https://u09-react-weather-app.web.app/",
-    img: "weatherapp",
-  },
-  {
     title: "Movies App",
     description: "Find movies and actors",
     tags: "Angular, TypeScript, OpenWeatherMap API",
     github: "https://github.com/enzozerega/u08-angular-movie-app",
     www: "https://u08-angular-movie-app.web.app/",
     img: "movieapp",
+  },
+  {
+    title: "Mediaspace",
+    description: "Post feed build with React",
+    tags: "React, MongoDB, Node.js",
+    github: "https://github.com/enzozerega/u11-mediaspace",
+    www: "https://u11-mediaspace-app.herokuapp.com/",
+    img: "mediaspace",
   },
   {
     title: "Hangman",
@@ -51,8 +51,7 @@ const proyects = [
     description: "ArcGIS toolbox",
     tags: "Python, ArcPy, ArcticDEM, GIS",
     label: "Details",
-    www:
-      "https://www.nateko.lu.se/article/students-created-toolbox-for-gis-software",
+    www: "https://www.nateko.lu.se/article/students-created-toolbox-for-gis-software",
     img: "toolbox",
   },
   {
@@ -64,13 +63,21 @@ const proyects = [
     img: "portfolio",
   },
   {
-    title: "Magic Crystals",
-    description: "Online store. My first website ever!",
-    tags: "HTML, CSS",
-    github: "https://github.com/enzozerega/u01-static-website",
-    www: "https://u01-static-website.web.app",
-    img: "magic-crystals",
+    title: "Weather App",
+    description: "Check the weather",
+    tags: "React, CSS, The Movie Database API",
+    github: "https://github.com/enzozerega/u09-react-weather-app",
+    www: "https://u09-react-weather-app.web.app/",
+    img: "weatherapp",
   },
+  // {
+  //   title: "Magic Crystals",
+  //   description: "Online store. My first website ever!",
+  //   tags: "HTML, CSS",
+  //   github: "https://github.com/enzozerega/u01-static-website",
+  //   www: "https://u01-static-website.web.app",
+  //   img: "magic-crystals",
+  // },
 ];
 
 export default function getProyects() {
